@@ -31,6 +31,7 @@
 
 
     // Hero Header carousel
+    
     $(".header-carousel").owlCarousel({
         items: 1,
         autoplay: true,
@@ -49,6 +50,7 @@
 
 
     // Project carousel
+    
     $(".project-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -124,7 +126,7 @@
 
     
    // Back to top button
-   $(window).scroll(function () {
+    $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
         $('.back-to-top').fadeIn('slow');
     } else {
