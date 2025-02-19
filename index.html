@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
     <link rel="icon" href="/img_02/favicon.ico" />
-    <link href="assets/img_02/---/apple-touch" rel="apple-touch">
+    <link href="assets/img_02/---/apple-touch" rel="apple-touch" />
 
     <!-- Libraries Stylesheet -->
     <link
@@ -35,6 +35,13 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <style type="text/css">
+      #contactForm .help-block ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+    </style>
 
     <!-- Customized Bootstrap Stylesheet -->
 
@@ -45,13 +52,18 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <!-- Google tag  google analytics (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"
+  ></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-SFH3B7H138');
+    gtag("config", "G-SFH3B7H138");
   </script>
   <body>
     <!-- Spinner Start -->
@@ -148,7 +160,7 @@
               <a href="about.html" class="nav-item nav-link">Nosotros</a>
               <a href="service.html" class="nav-item nav-link">Servicios</a>
 
-              <!-- <a href="#" class="nav-item nav-link">Contacto</a> -->
+              <a href="contact.html" class="nav-item nav-link">Contacto</a>
             </div>
             <div class="d-flex align-items-center flex-nowrap pt-xl-0">
               <!-- <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button> -->
@@ -206,67 +218,76 @@
 
     <!-- Modal Search End -->
 
-        <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item">
-                <div class="">
-                    <img src="img_02/---/carrusel_star_01.jpg" class="img-fluid w-100" alt="Image">
-                </div>
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-start p-3">
-                        <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;"> Transformamos tus Ideas en Negocios Globales</h1>
-                        <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">
-                        </p>
-
-            <!-- <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Apply Now</a> -->
-
-            <!-- <a
-              class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated"
+    <!-- Carousel Start -->
+    <div class="header-carousel owl-carousel">
+      <div class="header-carousel-item">
+        <div class="">
+          <img
+            src="img_02/---/carrusel_star_01.jpg"
+            class="img-fluid w-100"
+            alt="Image"
+          />
+        </div>
+        <div class="carousel-caption">
+          <div class="carousel-caption-inner text-start p-3">
+            <h1
+              class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated"
+              data-animation="fadeInUp"
+              data-delay="1.3s"
+              style="animation-delay: 1.3s"
+            >
+              Transformamos tus Ideas en Negocios Globales
+            </h1>
+            <p
+              class="mb-5 fs-5 fadeInUp animate__animated"
               data-animation="fadeInUp"
               data-delay="1.5s"
-              style="animation-delay: 1.7s"
-              href="#"
-              >Descubre Cómo Funciona</a
-            > -->
+              style="animation-delay: 1.5s"
+            ></p>
           </div>
         </div>
       </div>
 
-            <div class="header-carousel-item mx-auto">
-                <div class="">
-                    <img src="img_02/---/carrusel_start_02.jpg" class="img-fluid w-100" alt="Image">
-                </div>
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-center p-3">
-                        <h1 class="display-1 text-capitalize text-white mb-4">ecosistema que simplifica y potencia tu comercio internacional </h1>
-                        <p class="mb-5 fs-5">
-                        </p>
-                        <!-- <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Apply Now</a> -->
-                        
-                        <!-- <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#">Descubre Cómo Funciona</a> -->
-                    </div>
-                </div>
-            </div> 
-
-
-            <div class="header-carousel-item">
-                <div class="">
-                    <img src="img_02/---/carrusel_start_03.jpg" class="img-fluid w-100" alt="Image">
-                </div>
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-end p-3">
-                        <h1 class="display-1 text-capitalize text-white mb-4">Conexión Global</h1>
-                        <p class="mb-5 fs-5">
-                        </p>
-                        <!-- <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Apply Now</a> -->
-                        
-                        <!-- <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#">Descubre Cómo Funciona</a> -->
-                    </div>
-                </div>
-            </div> 
+      <div class="header-carousel-item mx-auto">
+        <div class="">
+          <img
+            src="img_02/---/carrusel_start_02.jpg"
+            class="img-fluid w-100"
+            alt="Image"
+          />
         </div>
-        <!-- Carousel End -->
+        <div class="carousel-caption">
+          <div class="carousel-caption-inner text-center p-3">
+            <h1 class="display-1 text-capitalize text-white mb-4">
+              ecosistema que simplifica y potencia tu comercio internacional
+            </h1>
+            <p class="mb-5 fs-5"></p>
+            <!-- <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Apply Now</a> -->
 
+            <!-- <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#">Descubre Cómo Funciona</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="header-carousel-item">
+        <div class="">
+          <img
+            src="img_02/---/carrusel_start_03.jpg"
+            class="img-fluid w-100"
+            alt="Image"
+          />
+        </div>
+        <div class="carousel-caption">
+          <div class="carousel-caption-inner text-end p-3">
+            <h1 class="display-1 text-capitalize text-white mb-4">
+              Conexión Global
+            </h1>
+            <p class="mb-5 fs-5"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel End -->
 
     <!-- About Start -->
     <div class="container-fluid about bg-light py-5">
@@ -279,7 +300,6 @@
                 class="img-fluid w-100 rounded-top bg-white"
                 alt="Image"
               />
-              <!-- <img src="img_02/437 x 364.png" class="img-fluid w-100 rounded-bottom" alt="Image"> -->
             </div>
           </div>
           <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
@@ -306,8 +326,6 @@
                   tamaño, tengan acceso a servicios de comercio exterior de
                   manera sencilla y confiable.
                 </p>
-
-                <!-- <p ><i class="fas fa-check-circle text-primary me-1"></i> #</p> -->
               </div>
               <div class="col-lg-6 col-xl-7">
                 <p>
@@ -322,24 +340,9 @@
                   personalizado y completo que cubre todos los aspectos de la
                   exportación e importación.
                 </p>
-                <!-- <p ><i class="fas fa-check-circle text-primary me-1"></i> #</p> -->
               </div>
             </div>
-            <!-- <div class="row g-4 justify-content-between mb-5">
-                            <div class="col-xl-5"><a href="#" class="btn btn-primary rounded-pill py-3 px-5">--****--</a></div>
-                            <div class="col-xl-7 mb-5">
-                                <div class="about-customer d-flex position-relative">
-                                    <img src="img_02/66px X 66px.png" class="img-fluid btn-xl-square position-absolute" style="left: 0; top: 0;"  alt="Image">
-                                    <img src="img_02/66px X 66px.png" class="img-fluid btn-xl-square position-absolute" style="left: 45px; top: 0;" alt="Image">
-                                    <img src="img_02/66px X 66px.png" class="img-fluid btn-xl-square position-absolute" style="left: 90px; top: 0;" alt="Image">
-                                    <img src="img_02/66px X 66px.png" class="img-fluid btn-xl-square position-absolute" style="left: 135px; top: 0;" alt="Image">
-                                    <div class="position-absolute " style="left: 220px; top: 10px;">
-                                        <p class="mb-0">5m+ Trusted</p>
-                                        <p class="mb-0">Global Customers</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+
             <div
               class="row g-4 text-center align-items-center justify-content-center"
             >
@@ -445,13 +448,15 @@
               </div>
               <div class="service-content text-center p-4">
                 <div class="service-content-inner">
-                  <a href="service.html" class="h4 mb-4 d-inline-flex text-center"
+                  <a
+                    href="service.html"
+                    class="h4 mb-4 d-inline-flex text-center"
                     ><i class="fas fa-2x me-2"></i> Asesoría
-                    <br />Internacional</a>
+                    <br />Internacional</a
+                  >
                   <p class="mb-4">
                     Tu Puente hacia Nuevas Oportunidades Globales
                   </p>
-                  <!-- <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a> -->
                 </div>
               </div>
             </div>
@@ -470,12 +475,13 @@
               </div>
               <div class="service-content text-center p-4">
                 <div class="service-content-inner">
-                  <a href="service.html" class="h4 mb-4 d-inline-flex text-center"
+                  <a
+                    href="service.html"
+                    class="h4 mb-4 d-inline-flex text-center"
                     ><i class="fas fa-2x me-2"></i> Análisis y Asesoría
                     Logística</a
                   >
                   <p class="mb-4">Optimiza tu Cadena de Suministro Global</p>
-                  <!-- <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a> -->
                 </div>
               </div>
             </div>
@@ -494,11 +500,12 @@
               </div>
               <div class="service-content text-center p-4">
                 <div class="service-content-inner">
-                  <a href="service.html" class="h4 mb-4 d-inline-flex text-center"
+                  <a
+                    href="service.html"
+                    class="h4 mb-4 d-inline-flex text-center"
                     ><i class="fas fa-2x me-2"></i>Transporte Internacional</a
                   >
                   <p class="mb-4">Conectando Tu Negocio con el Mundo</p>
-                  <!-- <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a> -->
                 </div>
               </div>
             </div>
@@ -517,7 +524,9 @@
               </div>
               <div class="service-content text-center p-4">
                 <div class="service-content-inner">
-                  <a href="service.html" class="h4 mb-4 d-inline-flex text-center"
+                  <a
+                    href="service.html"
+                    class="h4 mb-4 d-inline-flex text-center"
                     ><i class="fas fa-2x me-2"></i> Transporte Nacional
                     Urbano</a
                   >
@@ -526,7 +535,6 @@
                     <br />
                     <br />
                   </p>
-                  <!-- <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a> -->
                 </div>
               </div>
             </div>
@@ -544,201 +552,6 @@
     </div>
     <!-- Services End -->
 
-    <!-- Team Start -->
-
-    <!-- <div class="container-fluid team pb-5">
-      <div class="container pb-5">
-        <div
-          class="text-center mx-auto pb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 800px"
-        >
-          <h4 class="text-primary">Nuestro Equipo</h4>
-          <h1 class="display-4">Miembros del equipo <br />Fast Comex</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Team End -->
-
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
       <div class="container py-5">
@@ -752,10 +565,6 @@
                   ofreciendo un entorno en el que cada paso en el camino
                   internacional está respaldado por una red de apoyo sólida.
                 </p>
-                <!-- <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                                </div> -->
               </div>
             </div>
           </div>
@@ -767,18 +576,16 @@
               <a href="about.html"
                 ><i class="fas fa-angle-right me-2"></i> Nosotros</a
               >
-              <a href="service.html"><i class="fas fa-angle-right me-2"></i> Servicios</a>
-
-              <!-- <a href="#"><i class="fas fa-angle-right me-2"></i> Contacto</a> -->
-
+              <a href="service.html"
+                ><i class="fas fa-angle-right me-2"></i> Servicios</a
+              >
             </div>
           </div>
           <div class="col-md-6 col-lg-6 col-xl-3">
             <div class="footer-item d-flex flex-column">
               <h4 class="text-white mb-4">Informacion de contacto</h4>
               <a href="https://maps.app.goo.gl/DA9rYVxa5fttaSgw8"
-                ><i class="fa fa-map-marker-alt me-2"></i> Oficina Principal <br>
-                Calle 83a #21-15, Barrio Polo Club</a
+                ><i class="fa fa-map-marker-alt me-2"></i> Oficina Principal</a
               >
               <a href=""
                 ><i class="fa fa-map-marker-alt me-2"></i> Oficina Zona
@@ -812,22 +619,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item-post d-flex flex-column">
-                            <h4 class="text-white mb-4">Popular Post</h4>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Investment</p>
-                                <a href="#" class=" text-white">Revisiting Your Investment & Distribution Goals</a>
-                            </div>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Business</p>
-                                <a href="#" class="text-white">Dimensional Fund Advisors Interview with Director</a>
-                            </div>
-                            <div class="footer-btn text-start">
-                                <a href="#" class="btn btn-light rounded-pill px-4">Ver Publicaciones <i class="fa fa-arrow-right ms-1"></i></a>
-                            </div>
-                        </div>
-                    </div> -->
         </div>
       </div>
     </div>
@@ -845,11 +636,7 @@
               >, Todos los derechos reservados.</span
             >
           </div>
-          <div class="col-md-6 text-center text-md-end text-body">
-            <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-            <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-            <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-          </div>
+          <div class="col-md-6 text-center text-md-end text-body"></div>
         </div>
       </div>
     </div>
@@ -867,10 +654,12 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Form Javascript -->
+    <script src="mailer/validation.form.js"></script>
+    <script src="mailer/contact.form.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
