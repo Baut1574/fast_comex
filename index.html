@@ -56,6 +56,12 @@
       .hero-glow-overlay { background: radial-gradient(circle at 50% 40%, rgba(217, 26, 42, 0.18) 0%, rgba(10, 14, 23, 0.88) 65%, #0A0E17 100%); }
       .card-hover-border { transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
       .card-hover-border:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -10px rgba(217, 26, 42, 0.18); }
+      .quote-service { min-height: 76px; border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.04); color: #cbd5e1; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+      .quote-service:hover:not([aria-pressed="true"]) { border-color: rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.08); color: #fff; transform: translateY(-1px); }
+      .quote-service[aria-pressed="true"] { border-color: #D91A2A; background-color: #D91A2A; color: #fff; box-shadow: 0 5px 16px rgba(217, 26, 42, 0.28); }
+      .quote-service:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+      .quote-service-icon { color: #f87171; }
+      .quote-service[aria-pressed="true"] .quote-service-icon { color: #fff; }
       @keyframes ping-slow { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.8); opacity: 0; } 100% { transform: scale(1); opacity: 0.8; } }
       .animate-ping-slow { animation: ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite; }
     </style>
@@ -177,9 +183,112 @@
             <span>Explorar Soluciones</span>
             <i class="fas fa-arrow-right"></i>
           </a>
-          <a class="px-8 py-3.5 rounded-xl text-base font-bold bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition transform hover:-translate-y-0.5" href="contact.html">
+          <a class="px-8 py-3.5 rounded-xl text-base font-bold bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition transform hover:-translate-y-0.5" href="#cotizador">
             Cotizar Operación
           </a>
+        </div>
+        <div class="mt-10 max-w-4xl mx-auto w-full bg-slate-900/90 backdrop-blur-xl border border-white/15 rounded-3xl p-6 sm:p-8 shadow-2xl text-left relative z-20" id="cotizador">
+          <div class="mb-6 pb-5 border-b border-white/10">
+            <div class="flex items-start gap-3">
+              <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-brand-red animate-ping shrink-0"></span>
+              <div>
+                <h2 class="text-base sm:text-lg font-bold text-white">Cotizador y solicitud directa a Fast Comex</h2>
+                <p class="text-xs text-slate-400 mt-1">Ingresa los datos de tu envío para conectar con nuestro equipo de operaciones.</p>
+              </div>
+            </div>
+            <fieldset class="mt-5">
+              <legend class="mb-2.5 text-xs font-semibold uppercase text-slate-300">Selecciona el servicio</legend>
+              <div aria-label="Tipo de servicio" class="grid grid-cols-2 lg:grid-cols-4 gap-2.5" role="group">
+                <button aria-pressed="true" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Marítimo (FCL/LCL)" type="button">
+                  <i class="quote-service-icon fas fa-ship w-5 text-center text-base" aria-hidden="true"></i>
+                  <span><span class="block text-xs sm:text-sm font-bold">Marítimo</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">FCL / LCL</span></span>
+                </button>
+                <button aria-pressed="false" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Aéreo Express" type="button">
+                  <i class="quote-service-icon fas fa-plane w-5 text-center text-base" aria-hidden="true"></i>
+                  <span><span class="block text-xs sm:text-sm font-bold">Aéreo</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">Carga express</span></span>
+                </button>
+                <button aria-pressed="false" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Terrestre / OTM" type="button">
+                  <i class="quote-service-icon fas fa-truck w-5 text-center text-base" aria-hidden="true"></i>
+                  <span><span class="block text-xs sm:text-sm font-bold">Terrestre</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">Transporte / OTM</span></span>
+                </button>
+                <button aria-pressed="false" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Aduanas" type="button">
+                  <i class="quote-service-icon fas fa-file-invoice w-5 text-center text-base" aria-hidden="true"></i>
+                  <span><span class="block text-xs sm:text-sm font-bold">Aduanas</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">Gestión aduanera</span></span>
+                </button>
+              </div>
+            </fieldset>
+          </div>
+          <form class="space-y-5" id="quote-form">
+            <input id="quote-service-value" name="servicio" type="hidden" value="Marítimo (FCL/LCL)" />
+            <fieldset>
+              <legend class="mb-3 text-xs font-bold uppercase text-slate-300">Detalles del envío</legend>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-slate-300" for="quote-origin">Origen</label>
+                <select class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-red" id="quote-origin" name="origen" required>
+                  <option value="">Selecciona origen</option>
+                  <option>Ningbo / Shanghai, China</option>
+                  <option>Miami, Estados Unidos</option>
+                  <option>Rotterdam / Hamburgo, Europa</option>
+                  <option>Ciudad de Panamá, Panamá</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-slate-300" for="quote-destination">Destino</label>
+                <select class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-red" id="quote-destination" name="destino" required>
+                  <option value="">Selecciona destino</option>
+                  <option>Bogotá D.C. (Aeropuerto / Zona Franca)</option>
+                  <option>Cartagena (SPRC / Contecar)</option>
+                  <option>Buenaventura (Aguadulce / SPRB)</option>
+                  <option>Medellín / Rionegro</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-slate-300" for="quote-cargo">Tipo de carga</label>
+                <select class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-red" id="quote-cargo" name="carga" required>
+                  <option value="">Selecciona tipo de carga</option>
+                  <option>Carga general (seca)</option>
+                  <option>Refrigerada / perecedera</option>
+                  <option>Peligrosa (IMO / químicos)</option>
+                  <option>Paquetería y muestras</option>
+                </select>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-xs font-semibold text-slate-300" for="quote-volume">Modalidad / volumen</label>
+                <input class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-volume" name="volumen" placeholder="Ej. 1 contenedor 40' HQ" required />
+              </div>
+            </div>
+            </fieldset>
+            <div class="pt-4 border-t border-white/10">
+              <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Datos de contacto para tu propuesta</span>
+                <span class="text-[11px] text-slate-400">Cotización personalizada</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="space-y-1.5">
+                  <label class="block text-xs font-semibold text-slate-300" for="quote-name">Nombre / empresa</label>
+                  <input autocomplete="name" class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-name" name="nombre" placeholder="Nombre o empresa" required />
+                </div>
+                <div class="space-y-1.5">
+                  <label class="block text-xs font-semibold text-slate-300" for="quote-email">Correo corporativo</label>
+                  <input autocomplete="email" class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-email" name="correo" placeholder="contacto@empresa.com" required type="email" />
+                </div>
+                <div class="space-y-1.5">
+                  <label class="block text-xs font-semibold text-slate-300" for="quote-phone">Teléfono / WhatsApp</label>
+                  <input autocomplete="tel" class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-phone" name="telefono" placeholder="+57 300 123 4567" required type="tel" />
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <p class="text-xs text-slate-300 leading-relaxed">Tu solicitud se enviará directamente a nuestro equipo comercial por WhatsApp.</p>
+              <button class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm shadow-lg shadow-brand-red/30 transition-all inline-flex items-center justify-center gap-2 shrink-0" type="submit">
+                <span>Enviar solicitud</span>
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -437,6 +546,42 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceInput = document.getElementById("quote-service-value");
+        const serviceButtons = document.querySelectorAll(".quote-service");
+        const quoteForm = document.getElementById("quote-form");
+
+        serviceButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            serviceInput.value = button.dataset.service;
+            serviceButtons.forEach(function (serviceButton) {
+              const isSelected = serviceButton === button;
+              serviceButton.setAttribute("aria-pressed", String(isSelected));
+            });
+          });
+        });
+
+        quoteForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const formData = new FormData(quoteForm);
+          const message = [
+            "Hola, quiero solicitar una cotización a Fast Comex.",
+            "Servicio: " + formData.get("servicio"),
+            "Origen: " + formData.get("origen"),
+            "Destino: " + formData.get("destino"),
+            "Tipo de carga: " + formData.get("carga"),
+            "Modalidad / volumen: " + formData.get("volumen"),
+            "Nombre / empresa: " + formData.get("nombre"),
+            "Correo: " + formData.get("correo"),
+            "Teléfono / WhatsApp: " + formData.get("telefono")
+          ].join("\n");
+
+          window.open("https://wa.me/573017265662?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+        });
+      });
+
+    </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         if (window.lucide) { window.lucide.createIcons(); }
