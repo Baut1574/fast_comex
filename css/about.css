@@ -1,0 +1,121 @@
+/******* About Page ********/
+.fc-underline-wave {
+  text-decoration: underline wavy rgba(217, 26, 42, 0.35);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35rem;
+}
+
+.fc-quote-border {
+  border-left: 4px solid #D91A2A;
+  padding-left: 1.25rem;
+}
+.fc-quote-border p {
+  font-style: italic;
+  line-height: 1.75;
+}
+
+.fc-about-float-badge {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
+  background: #0B0F17;
+  border: 1px solid #1E293B;
+  color: #fff;
+  box-shadow: 0 15px 35px -12px rgba(0, 0, 0, 0.4);
+}
+.fc-about-float-badge strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.fc-about-float-badge small {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  color: #94A3B8;
+}
+
+.fc-stat-lg {
+  padding: 1.5rem 1rem;
+}
+.fc-stat-lg strong {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+.fc-stat-lg .fc-plus {
+  color: #D91A2A;
+}
+
+.fc-stat-red .fc-plus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.fc-about-media img {
+  height: 520px;
+}
+
+@media (max-width: 575.98px) {
+  .fc-about-media img {
+    height: 380px;
+  }
+  .fc-about-float-badge {
+    left: 0.5rem;
+    top: -1rem;
+  }
+}
+.fc-pillar-card {
+  padding: 1.5rem;
+}
+.fc-pillar-card h4 {
+  margin-bottom: 0.5rem;
+}
+.fc-pillar-card p {
+  line-height: 1.65;
+}
+
+.fc-pillar-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  color: #D91A2A;
+  font-size: 1.15rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(15, 23, 42, 0.05);
+  transition: all 0.25s ease;
+}
+
+.fc-pillar-card:hover .fc-pillar-icon {
+  background: #D91A2A;
+  border-color: #D91A2A;
+  color: #fff;
+}
+
+.fc-cta-about {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #0B0F17 0%, #111827 55%, #1E293B 100%);
+}
+.fc-cta-about::after {
+  content: "";
+  position: absolute;
+  right: -6rem;
+  top: -6rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: rgba(217, 26, 42, 0.18);
+  filter: blur(60px);
+  pointer-events: none;
+}

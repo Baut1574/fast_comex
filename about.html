@@ -2,845 +2,437 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Fast Comex</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nosotros | Fast Comex - Soluciones Logísticas y Comercio Exterior</title>
     <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <meta content="Conoce a Fast Comex: creamos un ecosistema de internacionalización sin barreras para que las PYMEs accedan al comercio exterior de forma ágil, segura y confiable." name="description" />
 
-    <!-- Google Web Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+    <!-- Favicon -->
     <link rel="icon" href="/img_02/favicon.ico" />
-    <link href="assets/img_02/---/apple-touch" rel="apple-touch" />
-    <!-- Libraries Stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" href="img_02/---/apple-touch.png" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <!-- Google tag  google analytics (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
 
-    gtag("config", "G-SFH3B7H138");
-  </script>
-  <body>
+    <!-- About Page Stylesheet -->
+    <link href="css/about.css" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-SFH3B7H138');
+    </script>
+  </head>
+
+  <body class="fc-body">
     <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-border text-primary"
-        style="width: 3rem; height: 3rem"
-        role="status"
-      >
-        <span class="sr-only">Cargando...</span>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-danger" style="width: 3rem; height: 3rem" role="status">
+        <span class="visually-hidden">Cargando...</span>
       </div>
     </div>
     <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid topbar px-0 d-none d-lg-block">
-      <div class="container px-0">
-        <div class="row gx-0 align-items-center" style="height: 45px">
-          <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-            <div class="d-flex flex-wrap">
-              <a
-                href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48"
-                class="text-muted me-4"
-                target="_blank"
-                ><i class="fas fa-map-marker-alt text-primary me-2"></i>Calle 83
-                a #21-15</a
-              >
-              <a href="#" class="text-muted me-4"
-                ><i class="fas fa-phone-alt text-primary me-2"></i>+(601) 534
-                3050</a
-              >
-              <a href="mailto:contacto@fast-comex.com" class="text-muted me-0"
-                ><i class="fas fa-envelope text-primary me-2"></i
-                >contacto@fast-comex.com</a
-              >
-            </div>
+    <!-- TopBar -->
+    <section class="fc-topbar" data-purpose="top-utility-bar">
+      <div class="container fc-container-wide">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+          <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4">
+            <a class="fc-topbar-item" href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-map-marker-alt fc-red"></i>
+              <span>Calle 83 a #21-15, Bogotá D.C.</span>
+            </a>
+            <a class="fc-topbar-item" href="tel:+6015343050">
+              <i class="fas fa-phone-alt fc-red"></i>
+              <span>+(601) 534 3050</span>
+            </a>
+            <a class="fc-topbar-item" href="mailto:contacto@fast-comex.com">
+              <i class="fas fa-envelope fc-red"></i>
+              <span>contacto@fast-comex.com</span>
+            </a>
           </div>
-          <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-flex align-items-center justify-content-end">
-              <a
-                href="https://www.facebook.com/profile.php?id=61568081906891"
-                target="_blank"
-                class="btn btn-primary btn-square rounded-circle nav-fill me-3"
-                ><i class="fab fa-facebook-f text-white"></i
-              ></a>
-              <a
-                href="#"
-                class="btn btn-primary btn-square rounded-circle nav-fill me-3"
-                ><i class="fab fa-twitter text-white"></i
-              ></a>
-              <a
-                href="#"
-                class="btn btn-primary btn-square rounded-circle nav-fill me-3"
-                ><i class="fab fa-instagram text-white"></i
-              ></a>
-              <a
-                href="#"
-                class="btn btn-primary btn-square rounded-circle nav-fill me-0"
-                ><i class="fab fa-linkedin-in text-white"></i
-              ></a>
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2 text-white-50">
+              <span class="fc-live-dot"></span>
+              <span>Monitoreo 24/7 Activo</span>
+            </div>
+            <div class="d-none d-sm-flex align-items-center gap-2">
+              <a aria-label="Facebook" class="fc-social-link" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a aria-label="Instagram" class="fc-social-link" href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a aria-label="LinkedIn" class="fc-social-link" href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Topbar End -->
+    </section>
+    <!-- TopBar End -->
 
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid sticky-top px-0">
-      <div
-        class="position-absolute bg-dark"
-        style="left: 0; top: 0; width: 100%; height: 100%"
-      ></div>
-      <div class="container px-0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-          <a href="index.html" class="navbar-brand p-0">
-            <!-- <h1 class="text-primary m-0"><i class="fas fa-donate me-3"></i>Investa</h1> -->
-            <img class="logo-navbar" src="img_02/---/logo_fast_svg.svg" Logo />
+    <!-- MainHeader -->
+    <header class="fc-header" data-purpose="primary-navigation">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container fc-container-wide">
+          <a aria-label="Fast Comex Inicio" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="img_02/---/logo_fast_svg.svg" alt="Fast Comex Logo" />
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="fa fa-bars"></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <i class="fas fa-bars fs-5"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-              <a href="index.html" class="nav-item nav-link">Inicio</a>
-              <a href="about.html" class="nav-item nav-link active">Nosotros</a>
-              <a href="service.html" class="nav-item nav-link">Servicios</a>
-
-              <a href="contact.html" class="nav-item nav-link">Contacto</a>
-            </div>
-            <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-              <!-- <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button> -->
-              <a
-                href="https://api.whatsapp.com/send?phone=573017265662"
-                target="_blank"
-                class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0"
-                >Whatsapp</a
-              >
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- Navbar & Hero End -->
-
-    <!-- Modal Search Start -->
-    <div
-      class="modal fade"
-      id="searchModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content rounded-0">
-          <div class="modal-header">
-            <h4 class="modal-title mb-0" id="exampleModalLabel">
-              Search by keyword
-            </h4>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body d-flex align-items-center">
-            <div class="input-group w-75 mx-auto d-flex">
-              <input
-                type="search"
-                class="form-control p-3"
-                placeholder="keywords"
-                aria-describedby="search-icon-1"
-              />
-              <span id="search-icon-1" class="input-group-text p-3"
-                ><i class="fa fa-search"></i
-              ></span>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+              <li class="nav-item"><a class="fc-nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="fc-nav-link active" href="about.html">Nosotros</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="service.html">Servicios</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="contact.html">Contacto</a></li>
+            </ul>
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2">
+              <a class="fc-btn fc-btn-sm d-inline-flex align-items-center justify-content-center gap-2 bg-light border text-dark" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp text-success"></i>
+                <span>Whatsapp</span>
+              </a>
+              <a class="fc-btn fc-btn-red fc-btn-sm text-uppercase" href="contact.html">
+                <span>Cotizar Ahora</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal Search End -->
+      </nav>
+    </header>
+    <!-- MainHeader End -->
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-      <div class="bg-breadcrumb-single"></div>
-      <div class="container text-center py-5" style="max-width: 900px">
-        <h4
-          class="text-white display-4 mb-4 wow fadeInDown"
-          data-wow-delay="0.1s"
-        >
-          Nosotros
-        </h4>
-        <ol
-          class="breadcrumb justify-content-center mb-0 wow fadeInDown"
-          data-wow-delay="0.3s"
-        >
-          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-          <li class="breadcrumb-item"><a href="#">Paginas</a></li>
-          <li class="breadcrumb-item active text-primary">Nosotros</li>
-        </ol>
+    <!-- HeroBanner -->
+    <section class="fc-hero" data-purpose="hero-about">
+      <img alt="Operación logística y portuaria de Fast Comex" class="fc-hero-bg" src="img_02/---/carrusel_star_01.jpg" />
+      <div class="fc-hero-overlay-left"></div>
+      <div class="fc-hero-pattern"></div>
+      <div class="fc-hero-content fc-hero-min-sm py-5">
+        <div class="container fc-container-wide text-center">
+          <nav class="fc-breadcrumb-pill mb-4">
+            <a href="index.html">Inicio</a>
+            <i class="fas fa-chevron-right fc-red" style="font-size: 0.55rem;"></i>
+            <span>Paginas</span>
+            <i class="fas fa-chevron-right fc-red" style="font-size: 0.55rem;"></i>
+            <span class="text-white fw-semibold">Nosotros</span>
+          </nav>
+          <h1 class="fc-title fc-title-xl text-white mb-4">Nosotros</h1>
+          <p class="mx-auto fc-text-light fs-6" style="max-width: 720px;">
+            Conectamos a las empresas con el comercio internacional de forma ágil, segura y sin barreras aduaneras.
+          </p>
+        </div>
       </div>
-    </div>
-    <!-- Header End -->
+    </section>
+    <!-- HeroBanner End -->
 
-    <!-- About Start -->
-    <div class="container-fluid about bg-light py-5">
-      <div class="container py-5">
+    <!-- AboutMainContent -->
+    <main class="fc-section bg-white" id="nosotros" data-purpose="about-fastcomex-overview">
+      <div class="container fc-container-wide">
         <div class="row g-5 align-items-center">
-          <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="about-img">
-              <img
-                src="img_02/---/about_01.jpg"
-                class="img-fluid w-100 rounded-top bg-white"
-                alt="Image"
-              />
-              <!-- <img
-                src="img_02/---/437 x 364 about2.png"
-                class="img-fluid w-100 rounded-bottom"
-                alt="Image"
-              /> -->
-            </div>
-          </div>
-          <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-            <h4 class="text-primary">Sobre Nosotros</h4>
-            <h1 class="display-5 mb-4">
-              Creemos que la internacionalización no debería ser una barrera,
-              sino una oportunidad.
-            </h1>
-            <p class="text ps-4 mb-4">
-              En Fast Comex, Nos dedicamos a crear un ecosistema de
-              internacionalización sin barreras, donde las pequeñas y medianas
-              empresas (PYMEs) pueden acceder fácilmente a servicios de comercio
-              exterior, con la confianza de que cada aspecto de su operación
-              está en manos de expertos comprometidos con su éxito global.
-            </p>
-            <div class="p1 row g-4 justify-content-between mb-5">
-              <div class="col-lg-6 col-xl-5">
-                <p>
-                  <i class="fas fa-check-circle text-primary me-1"></i> Nuestra
-                  Visión
-                </p>
-                <h1 style="font-size: medium">
-                  Un Ecosistema de Internacionalización Sin Barreras
-                </h1>
-                <p>
-                  Imaginamos un mundo donde todas las empresas, sin importar su
-                  tamaño, tengan acceso a servicios de comercio exterior de
-                  manera sencilla y confiable. Nuestro objetivo es transformar
-                  la incertidumbre en confianza, ofreciendo un entorno en el que
-                  cada paso en el camino internacional está respaldado por una
-                  red de apoyo sólida.
-                </p>
-                <!-- <p ><i class="fas fa-check-circle text-primary me-1"></i> #</p> -->
-              </div>
-              <div class="col-lg-6 col-xl-7">
-                <p>
-                  <i class="fas fa-check-circle text-primary me-1"></i> Nuestra
-                  Misión
-                </p>
-                <h1 style="font-size: medium">
-                  Facilitar la Internacionalización de PYMEs
-                </h1>
-                <p>
-                  Nos especializamos en ofrecer a las PYMEs un servicio
-                  personalizado y completo que cubre todos los aspectos de la
-                  exportación e importación. Como un aliado estratégico, nos
-                  aseguramos de que nuestros clientes naveguen el proceso de
-                  internacionalización de manera segura, eficiente y rentable.
-                  Más que un servicio, nos convertimos en una extensión de su
-                  equipo, trabajando juntos para que cada operación
-                  internacional sea exitosa
-                </p>
-                <!-- <p ><i class="fas fa-check-circle text-primary me-1"></i> #</p> -->
-              </div>
-            </div>
-
-            <div
-              class="row g-4 text-center align-items-center justify-content-center"
-            >
-              <div class="col-sm-4">
-                <div class="bg-primary rounded p-4">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <span
-                      class="counter-value fs-1 fw-bold text-dark"
-                      data-toggle="counter-up"
-                      >32</span
-                    >
-                    <h4
-                      class="text-dark fs-1 mb-0"
-                      style="font-weight: 600; font-size: 25px"
-                    >
-                      k+
-                    </h4>
-                  </div>
-                  <div
-                    class="w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <p class="text-white mb-0">Ecosistema Integral</p>
+          <!-- Visual showcase -->
+          <div class="col-lg-5">
+            <div class="position-relative">
+              <div class="fc-about-media">
+                <img alt="Transporte y logística de comercio exterior Fast Comex" src="img_02/---/about_01.jpg" />
+                <div class="fc-about-caption">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="fc-icon-box fc-icon-box-red flex-shrink-0">
+                      <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <div>
+                      <p class="text-white-50 text-uppercase fw-bold mb-1" style="font-size: 0.62rem; letter-spacing: 0.1em;">Flota y Operaciones</p>
+                      <h4 class="text-white fw-bold mb-0" style="font-size: 0.85rem; line-height: 1.4;">Hub Logístico Multimodal en Puertos y Zonas Francas</h4>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="bg-dark rounded p-4">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <span
-                      class="counter-value fs-1 fw-bold text-white"
-                      data-toggle="counter-up"
-                      >21</span
-                    >
-                    <h4
-                      class="text-white fs-1 mb-0"
-                      style="font-weight: 600; font-size: 25px"
-                    >
-                      +
-                    </h4>
-                  </div>
-                  <div
-                    class="w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <p class="mb-0">Velocidad y Precisión</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="bg-primary rounded p-4">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <span
-                      class="counter-value fs-1 fw-bold text-dark"
-                      data-toggle="counter-up"
-                      >97</span
-                    >
-                    <h4
-                      class="text-dark fs-1 mb-0"
-                      style="font-weight: 600; font-size: 25px"
-                    >
-                      +
-                    </h4>
-                  </div>
-                  <div
-                    class="w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <p class="text-white mb-0">Conexión Global</p>
-                  </div>
+              <div class="fc-about-float-badge d-none d-sm-flex">
+                <span class="fc-live-dot"></span>
+                <div>
+                  <strong>100% Garantía</strong>
+                  <small>Cumplimiento Operativo</small>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- About End -->
 
-    <!-- Testimonial Start -->
+          <!-- Content -->
+          <div class="col-lg-7">
+            <span class="fc-eyebrow mb-2">Sobre Nosotros</span>
+            <h2 class="fc-title fc-title-lg text-dark mb-4">
+              Creemos que la internacionalización no debería ser una barrera, sino una <span class="fc-red fc-underline-wave">oportunidad</span>.
+            </h2>
 
-    <!-- <div class="container-fluid testimonial bg-light py-5">
-      <div class="container py-5">
-        <div class="row g-4 align-items-center">
-          <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="h-100 rounded">
-              <h4 class="text-primary">Nuestros Comentarios</h4>
-              <h1 class="display-4 mb-4">Los clientes estan hablando</h1>
-              <p class="mb-4">
-                Estos son algunos de los comentarios que hemos recibido de
-                nuestros clientes al adquirir nuestros servicios:
+            <div class="fc-quote-border mb-4">
+              <p class="fc-text-slate mb-0">
+                En <strong class="text-dark">Fast Comex</strong>, nos dedicamos a crear un ecosistema de internacionalización sin barreras, donde las pequeñas y medianas empresas (PYMEs) pueden acceder fácilmente a servicios de comercio exterior, con la confianza de que cada aspecto de su operación está en manos de expertos comprometidos con su éxito global.
               </p>
-              <a
-                class="btn btn-primary rounded-pill text-white py-3 px-5"
-                href="#"
-              >
-                <i class="fas fa-arrow-right ms-2"></i
-              ></a>
             </div>
-          </div>
-          <div class="col-xl-8">
-            <div
-              class="testimonial-carousel owl-carousel wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div
-                class="testimonial-item bg-white rounded p-4 wow fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                <div class="d-flex">
-                  <div>
-                    <i class="fas fa-quote-left fa-3x text-dark me-3"></i>
+
+            <!-- Vision and Mission -->
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="fc-card p-4 h-100">
+                  <div class="d-flex align-items-center gap-2 fc-red fw-bold mb-2" style="font-size: 0.85rem;">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="text-uppercase" style="letter-spacing: 0.08em;">Nuestra Visión</span>
                   </div>
-                  <p class="mt-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Magnam eos impedit eveniet dolorem culpa ullam incidunt vero
-                    quo recusandae nemo? Molestiae doloribus iure,
+                  <h3 class="fw-bold text-dark mb-2" style="font-size: 0.95rem;">Un Ecosistema de Internacionalización Sin Barreras</h3>
+                  <p class="fc-text-slate mb-0" style="font-size: 0.8rem; line-height: 1.7;">
+                    Imaginamos un mundo donde todas las empresas, sin importar su tamaño, tengan acceso a servicios de comercio exterior de manera sencilla y confiable. Nuestro objetivo es transformar la incertidumbre en confianza, ofreciendo un entorno en el que cada paso en el camino internacional está respaldado por una red de apoyo sólida.
                   </p>
                 </div>
-                <div class="d-flex justify-content-end">
-                  <div class="my-auto text-end">
-                    <h5>Nombre Cliente</h5>
-                    <p class="mb-0">Profession</p>
-                  </div>
-                  <div class="bg-white rounded-circle ms-3">
-                    <img
-                      src="img_02/66px X 66px.png"
-                      class="rounded-circle p-2"
-                      style="
-                        width: 80px;
-                        height: 80px;
-                        border: 1px solid;
-                        border-color: var(--bs-primary);
-                      "
-                      alt=""
-                    />
-                  </div>
-                </div>
               </div>
-              <div
-                class="testimonial-item bg-white rounded p-4 wow fadeInUp"
-                data-wow-delay="0.5s"
-              >
-                <div class="d-flex">
-                  <div>
-                    <i class="fas fa-quote-left fa-3x text-dark me-3"></i>
+              <div class="col-md-6">
+                <div class="fc-card p-4 h-100">
+                  <div class="d-flex align-items-center gap-2 fc-red fw-bold mb-2" style="font-size: 0.85rem;">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="text-uppercase" style="letter-spacing: 0.08em;">Nuestra Misión</span>
                   </div>
-                  <p class="mt-4">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Temporibus repellendus commodi officia hic velit iure
-                    provident obcaecati dolorem consectetur praesentium. Aliquam
-                    facere, quidem ipsa ut expedita ipsam rem repudiandae.
-                    Voluptas?
+                  <h3 class="fw-bold text-dark mb-2" style="font-size: 0.95rem;">Facilitar la Internacionalización de PYMEs</h3>
+                  <p class="fc-text-slate mb-0" style="font-size: 0.8rem; line-height: 1.7;">
+                    Nos especializamos en ofrecer a las PYMEs un servicio personalizado y completo que cubre todos los aspectos de la exportación e importación. Como un aliado estratégico, nos aseguramos de que nuestros clientes naveguen el proceso de internacionalización de manera segura, eficiente y rentable. Más que un servicio, nos convertimos en una extensión de su equipo, trabajando juntos para que cada operación internacional sea exitosa.
                   </p>
                 </div>
-                <div class="d-flex justify-content-end">
-                  <div class="my-auto text-end">
-                    <h5>Nombre Cliente</h5>
-                    <p class="mb-0">Profession</p>
-                  </div>
-                  <div class="bg-white rounded-circle ms-3">
-                    <img
-                      src="img_02/66px X 66px.png"
-                      class="rounded-circle p-2"
-                      style="
-                        width: 80px;
-                        height: 80px;
-                        border: 1px solid;
-                        border-color: var(--bs-primary);
-                      "
-                      alt=""
-                    />
-                  </div>
+              </div>
+            </div>
+
+            <!-- Metrics -->
+            <div class="row g-3 mt-1" data-purpose="metrics-counter-bar">
+              <div class="col-4">
+                <div class="fc-stat fc-stat-dark fc-stat-lg">
+                  <strong>32k<span class="fc-plus">+</span></strong>
+                  <span>Ecosistema Integral</span>
                 </div>
               </div>
-              <div
-                class="testimonial-item bg-white rounded p-4 wow fadeInUp"
-                data-wow-delay="0.7s"
-              >
-                <div class="d-flex">
-                  <div>
-                    <i class="fas fa-quote-left fa-3x text-dark me-3"></i>
-                  </div>
-                  <p class="mt-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Magnam eos impedit eveniet dolorem culpa ullam incidunt vero
-                    quo recusandae nemo? Molestiae doloribus iure,
-                  </p>
+              <div class="col-4">
+                <div class="fc-stat fc-stat-red fc-stat-lg">
+                  <strong>21<span class="fc-plus">+</span></strong>
+                  <span>Velocidad y Precisión</span>
                 </div>
-                <div class="d-flex justify-content-end">
-                  <div class="my-auto text-end">
-                    <h5>Nombre Cliente</h5>
-                    <p class="mb-0">Profession</p>
-                  </div>
-                  <div class="bg-white rounded-circle ms-3">
-                    <img
-                      src="img_02/66px X 66px.png"
-                      class="rounded-circle p-2"
-                      style="
-                        width: 80px;
-                        height: 80px;
-                        border: 1px solid;
-                        border-color: var(--bs-primary);
-                      "
-                      alt=""
-                    />
-                  </div>
+              </div>
+              <div class="col-4">
+                <div class="fc-stat fc-stat-dark fc-stat-lg">
+                  <strong>97<span class="fc-plus">+</span></strong>
+                  <span>Conexión Global</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </main>
+    <!-- AboutMainContent End -->
 
-    <!-- Testimonial End -->
-
-    <!-- Team Start -->
-
-    <!-- <div class="container-fluid team pb-5">
-      <div class="container pb-5">
-        <div
-          class="text-center mx-auto pb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 800px"
-        >
-          <h4 class="text-primary">Nuestro Equipo</h4>
-          <h1 class="display-4">Miembros del equipo <br />Fast Comex</h1>
+    <!-- StrategicPillarsSection -->
+    <section class="fc-section-sm fc-soft-bg border-top border-bottom" data-purpose="corporate-pillars">
+      <div class="container fc-container-wide">
+        <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+          <span class="fc-badge-red mb-3">¿Por qué Fast Comex?</span>
+          <h2 class="fc-title fc-title-lg text-dark mb-3">Pilares que impulsan tu competitividad en el mercado global</h2>
+          <p class="fc-text-slate mb-0">
+            Acompañamos a su compañía en cada paso aduanero, logístico y documental con los más altos estándares de calidad internacional.
+          </p>
         </div>
-        <div class="row g-4 justify-content-center">
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-pillar-card h-100">
+              <div class="fc-pillar-icon">
+                <i class="fas fa-shield-halved"></i>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
-            </div>
+              <h4 class="fw-bold text-dark" style="font-size: 1rem;">Compromiso y Seguridad</h4>
+              <p class="fc-text-slate mb-0" style="font-size: 0.8rem;">
+                Custodia integral de la mercancía con rigurosos protocolos aduaneros y mitigación proactiva de riesgos de transporte.
+              </p>
+            </article>
           </div>
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-pillar-card h-100">
+              <div class="fc-pillar-icon">
+                <i class="fas fa-satellite-dish"></i>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
-            </div>
+              <h4 class="fw-bold text-dark" style="font-size: 1rem;">Trazabilidad Total</h4>
+              <p class="fc-text-slate mb-0" style="font-size: 0.8rem;">
+                Reportes claros y estado en tiempo real de cada fase de embarque, desaduanamiento e inspección de puerto a destino final.
+              </p>
+            </article>
           </div>
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-pillar-card h-100">
+              <div class="fc-pillar-icon">
+                <i class="fas fa-handshake-angle"></i>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
-            </div>
+              <h4 class="fw-bold text-dark" style="font-size: 1rem;">Asesoría Experta PYME</h4>
+              <p class="fc-text-slate mb-0" style="font-size: 0.8rem;">
+                Consultoría tributaria y cambiaria adaptada para emprendimientos y compañías medianas que buscan expandirse sin sobrecostos.
+              </p>
+            </article>
           </div>
-          <div
-            class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.7s"
-          >
-            <div class="team-item rounded">
-              <div class="team-img">
-                <img
-                  src="img_02/259px x 259px.png"
-                  class="img-fluid w-100 rounded-top"
-                  alt="Image"
-                />
-                <div class="team-icon">
-                  <a
-                    class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                    href=""
-                    ><i class="fas fa-share-alt"></i
-                  ></a>
-                  <div class="team-icon-share">
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-3"
-                      href=""
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-                    <a
-                      class="btn btn-primary btn-sm-square text-white rounded-circle mb-0"
-                      href=""
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                  </div>
-                </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-pillar-card h-100">
+              <div class="fc-pillar-icon">
+                <i class="fas fa-earth-americas"></i>
               </div>
-              <div class="team-content bg-dark text-center rounded-bottom p-4">
-                <div class="team-content-inner rounded-bottom">
-                  <h4 class="text-white">Alvaro Moreno</h4>
-                  <p class="text-muted mb-0">CEO & Founder</p>
-                </div>
-              </div>
+              <h4 class="fw-bold text-dark" style="font-size: 1rem;">Alianzas Globales</h4>
+              <p class="fc-text-slate mb-0" style="font-size: 0.8rem;">
+                Red de corresponsales y agentes de carga confiables en los principales puertos de China, Estados Unidos, Europa y Latinoamérica.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- StrategicPillarsSection End -->
+
+    <!-- CallToActionBanner -->
+    <section class="fc-cta-about fc-section-sm text-white" data-purpose="call-to-action">
+      <div class="container fc-container-wide position-relative">
+        <div class="row g-4 align-items-center justify-content-between">
+          <div class="col-lg-7">
+            <h2 class="fc-title fc-title-lg text-white mb-3">¿Listo para expandir tu negocio al mundo?</h2>
+            <p class="fc-text-light mb-0" style="max-width: 620px; font-weight: 300;">
+              Nuestros expertos en importación, exportación y aduanas están listos para analizar tus requerimientos y diseñar la ruta más eficiente.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex flex-wrap align-items-center justify-content-lg-end gap-3">
+              <a class="fc-btn fc-btn-red" href="tel:+6015343050">
+                <i class="fas fa-phone-volume"></i>
+                <span>Llamar a un Asesor</span>
+              </a>
+              <a class="fc-btn fc-btn-whatsapp" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp fs-5"></i>
+                <span>Escribir por WhatsApp</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </section>
+    <!-- CallToActionBanner End -->
 
-    <!-- Team End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-md-6 col-lg-6 col-xl-3">
-            <div class="footer-item d-flex flex-column">
-              <div class="footer-item">
-                <h4 class="text-white mb-4">Informacion</h4>
-                <p class="mb-3">
-                  Nuestro objetivo es transformar la incertidumbre en confianza,
-                  ofreciendo un entorno en el que cada paso en el camino
-                  internacional está respaldado por una red de apoyo sólida.
-                </p>
-              </div>
+    <!-- CorporateFooter -->
+    <footer class="fc-footer" data-purpose="corporate-footer">
+      <div class="container fc-container-wide">
+        <div class="row g-4 pb-5 border-bottom border-secondary border-opacity-10">
+          <!-- Column 1: Info Institucional -->
+          <div class="col-md-12 col-lg-5">
+            <img class="mb-3" style="height: 2.5rem;" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex" />
+            <h5 class="fc-title text-white mb-2" style="font-size: 1rem;">Información</h5>
+            <p class="fc-text-muted mb-3" style="font-size: 0.875rem; line-height: 1.7; max-width: 440px;">
+              Nuestro objetivo es transformar la incertidumbre en confianza, ofreciendo un entorno en el que cada paso en el camino internacional está respaldado por una red de apoyo sólida.
+            </p>
+            <div class="d-flex align-items-center gap-2 mt-3">
+              <a aria-label="Facebook" class="fc-social" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a aria-label="X Twitter" class="fc-social" href="#">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a aria-label="Instagram" class="fc-social" href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a aria-label="LinkedIn" class="fc-social" href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3">
-            <div class="footer-item d-flex flex-column">
-              <h4 class="text-white mb-4">Explorar</h4>
 
-              <a href="index.html"
-                ><i class="fas fa-angle-right me-2"></i> Inicio</a
-              >
-
-              <a href="about.html"
-                ><i class="fas fa-angle-right me-2"></i> Nosotros</a
-              >
-              <a href="service.html"
-                ><i class="fas fa-angle-right me-2"></i> Servicios</a
-              >
-
-              <!-- <a href="#"><i class="fas fa-angle-right me-2"></i> Contacto</a> -->
-            </div>
+          <!-- Column 2: Explorar -->
+          <div class="col-md-6 col-lg-3">
+            <h5>Explorar</h5>
+            <ul class="fc-footer-list">
+              <li><a href="index.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Inicio</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Nosotros</a></li>
+              <li><a href="service.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Servicios</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Contacto</a></li>
+            </ul>
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-3">
-            <div class="footer-item d-flex flex-column">
-              <h4 class="text-white mb-4">Informacion de contacto</h4>
-              <a href="https://maps.app.goo.gl/DA9rYVxa5fttaSgw8"
-                ><i class="fa fa-map-marker-alt me-2"></i> Oficina Principal</a
-              >
-              <a href=""
-                ><i class="fas fa-envelope me-2"></i> contacto@fast-comex.com</a
-              >
-              <a href=""
-                ><i class="fa fa-map-marker-alt me-2"></i> Oficina Zona
-                Franca</a
-              >
 
-              <a href=""
-                ><i class="fas fa-envelope me-2"></i> contacto@fast-comex.com</a
-              >
-              <a href=""><i class="fas fa-phone me-2"></i> +(601) 534 3050</a>
-              <a href="" class="mb-3"
-                ><i class="fas fa-print me-2"></i> +(601) 534 3050</a
-              >
-              <div class="d-flex align-items-center">
-                <a
-                  class="btn btn-light btn-md-square me-2"
-                  href="https://www.facebook.com/profile.php?id=61568081906891"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-light btn-md-square me-2" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-light btn-md-square me-2" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a class="btn btn-light btn-md-square me-0" href=""
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item-post d-flex flex-column">
-                            <h4 class="text-white mb-4">Popular Post</h4>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Investment</p>
-                                <a href="#" class=" text-white">Revisiting Your Investment & Distribution Goals</a>
-                            </div>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Business</p>
-                                <a href="#" class="text-white">Dimensional Fund Advisors Interview with Director</a>
-                            </div>
-                            <div class="footer-btn text-start">
-                                <a href="#" class="btn btn-light rounded-pill px-4">Ver Publicaciones <i class="fa fa-arrow-right ms-1"></i></a>
-                            </div>
-                        </div>
-                    </div> -->
-        </div>
-      </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-md-6 text-center text-md-start mb-md-0">
-            <span class="text-body"
-              ><a href="#" class="border-bottom text-primary"
-                ><i class="fas fa-copyright text-primary me-2"></i
-                >fast-comex.com</a
-              >, Todos los derechos reservados.</span
-            >
-          </div>
-          <div class="col-md-6 text-center text-md-end text-body">
-            <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-            <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-            <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+          <!-- Column 3: Información de Contacto -->
+          <div class="col-md-6 col-lg-4">
+            <h5>Información de contacto</h5>
+            <ul class="fc-footer-contact">
+              <li>
+                <i class="fas fa-location-dot"></i>
+                <span><strong class="text-white">Oficina Principal:</strong> Calle 83 a #21-15, Bogotá D.C.</span>
+              </li>
+              <li>
+                <i class="fas fa-location-dot"></i>
+                <span><strong class="text-white">Oficina Zona Franca:</strong> Fontibón, Bogotá D.C.</span>
+              </li>
+              <li>
+                <i class="fas fa-location-dot"></i>
+                <a href="https://maps.app.goo.gl/gND5Ls4cyceMCcVy9" target="_blank" rel="noopener noreferrer"><strong class="text-white">Oficina China:</strong> Shenzhen &amp; Yiwu Logistics Hubs</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:contacto@fast-comex.com">contacto@fast-comex.com</a>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+6015343050">+(601) 534 3050</a>
+              </li>
+              <li>
+                <i class="fas fa-print"></i>
+                <span>+(601) 534 3050</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Copyright End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square back-to-top"
-      ><i class="fa fa-arrow-up"></i
-    ></a>
+        <!-- Bottom Copyright & Back to Top -->
+        <div class="fc-footer-bottom d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+          <p class="mb-0 d-flex align-items-center gap-2">
+            <i class="far fa-copyright fc-red"></i>
+            <span><span class="fc-red fw-semibold">fast-comex</span>. Todos los derechos reservados.</span>
+          </p>
+          <a class="fc-back-top position-static" href="#" style="width: auto; height: auto; border: 0; background: transparent; box-shadow: none; padding: 0;">
+            <span class="me-1">Volver arriba</span>
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- CorporateFooter End -->
 
     <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var spinner = document.getElementById("spinner");
+        if (spinner) {
+          window.setTimeout(function () {
+            spinner.classList.remove("show");
+          }, 200);
+        }
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        var backTop = document.querySelector(".fc-back-top");
+        if (backTop) {
+          backTop.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
