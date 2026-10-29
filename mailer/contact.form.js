@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
 
-    $("#contactForm input, #contactForm textarea").jqBootstrapValidation({
+    $("#contactForm input, #contactForm textarea, #contactForm select").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function ($form, event, errors) {},
         submitSuccess: function ($form, event) {
@@ -17,11 +17,9 @@
 
             var $button = $("#sendMessageButton");
             var $buttonText = $button.find("span");
-            var $buttonIcon = $button.find("i, svg");
 
-            $button.prop("disabled", true).addClass("opacity-70 cursor-not-allowed");
+            $button.prop("disabled", true);
             $buttonText.text("Enviando...");
-            $buttonIcon.addClass("animate-pulse");
 
             $.ajax({
                 url: "mailer/contact.form.php",
@@ -39,21 +37,15 @@
                 cache: false,
                 success: function (response) {
                     var isSuccess = response.status === "success";
-                    var alertStyles = isSuccess
-                        ? "border-emerald-200 bg-emerald-50 text-emerald-800"
-                        : "border-red-200 bg-red-50 text-red-800";
-                    var alertIcon = isSuccess ? "check-circle-2" : "alert-circle";
+                    var alertClass = isSuccess ? "alert alert-success" : "alert alert-danger";
+                    var alertIcon = isSuccess ? "fa-check-circle" : "fa-exclamation-circle";
 
                     $('#alertMessage').html(
-                        '<div class="mb-6 flex items-start gap-3 rounded-xl border p-4 text-sm ' + alertStyles + '">' +
-                            '<i data-lucide="' + alertIcon + '" class="w-5 h-5 shrink-0"></i>' +
-                            '<strong class="font-semibold">' + response.message + "</strong>" +
+                        '<div class="' + alertClass + ' d-flex align-items-start gap-2 mb-4" role="alert">' +
+                            '<i class="fas ' + alertIcon + ' mt-1"></i>' +
+                            '<strong class="fw-semibold">' + response.message + "</strong>" +
                         "</div>"
                     );
-
-                    if (window.lucide) {
-                        window.lucide.createIcons();
-                    }
 
                     if (isSuccess) {
                         $('#contactForm').trigger("reset");
@@ -61,20 +53,15 @@
                 },
                 error: function (xhr, textStatus, errorThrown) {
                     $('#alertMessage').html(
-                        '<div class="mb-6 flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">' +
-                            '<i data-lucide="alert-circle" class="w-5 h-5 shrink-0"></i>' +
-                            '<strong class="font-semibold">No se pudo enviar el mensaje. Por favor intenta nuevamente.</strong>' +
+                        '<div class="alert alert-danger d-flex align-items-start gap-2 mb-4" role="alert">' +
+                            '<i class="fas fa-exclamation-circle mt-1"></i>' +
+                            '<strong class="fw-semibold">No se pudo enviar el mensaje. Por favor intenta nuevamente.</strong>' +
                         "</div>"
                     );
-
-                    if (window.lucide) {
-                        window.lucide.createIcons();
-                    }
                 },
                 complete: function () {
-                    $button.prop("disabled", false).removeClass("opacity-70 cursor-not-allowed");
+                    $button.prop("disabled", false);
                     $buttonText.text("Enviar Mensaje a Fast Comex");
-                    $buttonIcon.removeClass("animate-pulse");
                 }
             });
         },

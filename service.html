@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="es">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -19,54 +19,11 @@
     <link rel="icon" href="/img_02/favicon.ico" />
     <link rel="apple-touch-icon" href="img_02/---/apple-touch.png" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                red: '#DC2626',
-                redHover: '#B91C1C',
-                darkRed: '#991B1B',
-                dark: '#0A0E17',
-                navy: '#0B0F17',
-                slate: '#0F172A',
-                cardBg: '#131B2E',
-                grayLight: '#F8FAFC',
-                muted: '#94A3B8'
-              }
-            },
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-              display: ['"Space Grotesk"', 'sans-serif']
-            },
-            boxShadow: {
-              'card-hover': '0 20px 35px -10px rgba(220, 38, 38, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.05)',
-              'red-glow': '0 0 25px -5px rgba(220, 38, 38, 0.5)'
-            }
-          }
-        }
-      }
-    </script>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Custom Style Adjustments -->
-    <style>
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        overflow-x: hidden;
-      }
-      .font-display {
-        font-family: 'Space Grotesk', sans-serif;
-      }
-      .service-card-transition {
-        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .service-card-transition:hover {
-        transform: translateY(-7px);
-      }
-    </style>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"></script>
@@ -78,42 +35,41 @@
     </script>
   </head>
 
-  <body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-brand-red selection:text-white">
+  <body class="fc-body">
     <!-- TopBar -->
-    <section class="bg-brand-dark text-slate-300 text-xs py-2.5 border-b border-slate-800/80 tracking-wide">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2">
-        <div class="flex flex-wrap items-center gap-y-1 gap-x-6 text-slate-300">
-          <a class="inline-flex items-center gap-1.5 hover:text-white transition" href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-map-marker-alt text-brand-red"></i>
-            <span>Calle 83 a #21-15</span>
-          </a>
-          <a class="inline-flex items-center gap-1.5 hover:text-white transition" href="tel:+6015343050">
-            <i class="fa-solid fa-phone-alt text-brand-red"></i>
-            <span>+(601) 534 3050</span>
-          </a>
-          <a class="inline-flex items-center gap-1.5 hover:text-white transition" href="mailto:contacto@fast-comex.com">
-            <i class="fa-solid fa-envelope text-brand-red"></i>
-            <span>contacto@fast-comex.com</span>
-          </a>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="flex items-center gap-2 text-slate-400 border-r border-slate-700 pr-4">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span class="text-[11px] font-medium text-slate-300">Monitoreo 24/7 Activo</span>
+    <section class="fc-topbar" data-purpose="top-utility-bar">
+      <div class="container fc-container-wide">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+          <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4">
+            <a class="fc-topbar-item" href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-map-marker-alt fc-red"></i>
+              <span>Calle 83 a #21-15</span>
+            </a>
+            <a class="fc-topbar-item" href="tel:+6015343050">
+              <i class="fas fa-phone-alt fc-red"></i>
+              <span>+(601) 534 3050</span>
+            </a>
+            <a class="fc-topbar-item" href="mailto:contacto@fast-comex.com">
+              <i class="fas fa-envelope fc-red"></i>
+              <span>contacto@fast-comex.com</span>
+            </a>
           </div>
-          <div class="flex items-center gap-3">
-            <a aria-label="Facebook" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red text-slate-300 hover:text-white flex items-center justify-center transition" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-facebook-f text-xs"></i>
-            </a>
-            <a aria-label="Instagram" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red text-slate-300 hover:text-white flex items-center justify-center transition" href="#">
-              <i class="fa-brands fa-instagram text-xs"></i>
-            </a>
-            <a aria-label="LinkedIn" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red text-slate-300 hover:text-white flex items-center justify-center transition" href="#">
-              <i class="fa-brands fa-linkedin-in text-xs"></i>
-            </a>
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2 text-white-50">
+              <span class="fc-live-dot"></span>
+              <span>Monitoreo 24/7 Activo</span>
+            </div>
+            <div class="d-none d-sm-flex align-items-center gap-2">
+              <a aria-label="Facebook" class="fc-social-link" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a aria-label="Instagram" class="fc-social-link" href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a aria-label="LinkedIn" class="fc-social-link" href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -121,458 +77,396 @@
     <!-- TopBar End -->
 
     <!-- MainHeader -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-shadow duration-300">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
-        <a aria-label="Fast Comex Inicio" class="flex items-center gap-2.5 group focus:outline-none" href="index.html">
-          <img class="h-10 w-auto" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex Logo" />
-        </a>
-        <nav class="hidden lg:flex items-center gap-8 text-[15px] font-semibold text-slate-700">
-          <a class="hover:text-brand-red transition-colors py-1" href="index.html">Inicio</a>
-          <a class="hover:text-brand-red transition-colors py-1" href="about.html">Nosotros</a>
-          <a class="text-brand-red relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-red" href="service.html">Servicios</a>
-          <a class="hover:text-brand-red transition-colors py-1" href="contact.html">Contacto</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <a class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold rounded-lg border border-slate-200 text-slate-800 hover:bg-slate-100 transition-colors" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
-            <span>Whatsapp</span>
+    <header class="fc-header" data-purpose="primary-navigation">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container fc-container-wide">
+          <a aria-label="Fast Comex Inicio" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="img_02/---/logo_fast_svg.svg" alt="Fast Comex Logo" />
           </a>
-          <a class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-red hover:bg-brand-redHover rounded-lg shadow-md shadow-brand-red/25 transition-all hover:shadow-lg" href="contact.html">
-            <span>Cotizar Ahora</span>
-            <i class="fa-solid fa-arrow-right text-[11px]"></i>
-          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <i class="fas fa-bars fs-5"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+              <li class="nav-item"><a class="fc-nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="about.html">Nosotros</a></li>
+              <li class="nav-item"><a class="fc-nav-link active" href="service.html">Servicios</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="contact.html">Contacto</a></li>
+            </ul>
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2">
+              <a class="fc-btn fc-btn-sm d-inline-flex align-items-center justify-content-center gap-2 bg-light border text-dark" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp text-success"></i>
+                <span>Whatsapp</span>
+              </a>
+              <a class="fc-btn fc-btn-red fc-btn-sm text-uppercase" href="contact.html">
+                <span>Cotizar Ahora</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
     <!-- MainHeader End -->
 
     <!-- HeroBanner -->
-    <section class="relative bg-brand-navy py-20 lg:py-28 overflow-hidden text-white border-b-4 border-brand-red" data-purpose="hero-services">
-      <div class="absolute inset-0 z-0">
-        <img alt="Puerto logistico de carga internacional con contenedores maritimos" class="w-full h-full object-cover object-center brightness-[0.25] contrast-125" src="img_02/---/carrusel_star_01.jpg" />
-        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-red-950/70 mix-blend-multiply"></div>
-        <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-red/20 rounded-full blur-3xl pointer-events-none"></div>
-      </div>
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center">
-        <nav class="inline-flex items-center gap-2.5 text-xs font-semibold px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-6 text-slate-300">
-          <a class="hover:text-white transition-colors" href="index.html">Inicio</a>
-          <i class="fa-solid fa-chevron-right text-[9px] text-brand-red"></i>
-          <span>Paginas</span>
-          <i class="fa-solid fa-chevron-right text-[9px] text-brand-red"></i>
-          <span class="text-white font-bold">Servicios</span>
-        </nav>
-        <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white mb-4 max-w-4xl leading-tight">
-          Nuestros Servicios
-        </h1>
-        <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-normal leading-relaxed text-center">
-          El aliado estrategico de las empresas que no quieren volar a ciegas en mercados internacionales: navegamos juntos hacia el exito global.
-        </p>
+    <section class="fc-hero" data-purpose="hero-services">
+      <img alt="Puerto logistico de carga internacional con contenedores maritimos" class="fc-hero-bg" src="img_02/---/carrusel_star_01.jpg" />
+      <div class="fc-hero-overlay-left"></div>
+      <div class="fc-hero-pattern"></div>
+      <div class="fc-hero-content fc-hero-min-sm py-5">
+        <div class="container fc-container-wide text-center">
+          <nav class="fc-breadcrumb-pill mb-4">
+            <a href="index.html">Inicio</a>
+            <i class="fas fa-chevron-right fc-red" style="font-size: 0.55rem;"></i>
+            <span>Paginas</span>
+            <i class="fas fa-chevron-right fc-red" style="font-size: 0.55rem;"></i>
+            <span class="text-white fw-semibold">Servicios</span>
+          </nav>
+          <h1 class="fc-title fc-title-xl text-white mb-4">Nuestros Servicios</h1>
+          <p class="mx-auto fc-text-light fs-6" style="max-width: 720px;">
+            El aliado estratégico de las empresas que no quieren volar a ciegas en mercados internacionales: navegamos juntos hacia el éxito global.
+          </p>
+        </div>
       </div>
     </section>
     <!-- HeroBanner End -->
 
     <!-- ServicesDirectorySection -->
-    <main class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-        <span class="inline-block text-xs uppercase font-extrabold tracking-widest text-brand-red bg-red-50 border border-red-200/60 px-4 py-1.5 rounded-full mb-3">
-          Somos tu Co-Piloto Internacional
-        </span>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-          Navegamos juntos hacia el <span class="text-brand-red">exito global</span>
-        </h2>
-        <p class="text-slate-600 text-base sm:text-lg">
-          Asi como ningun piloto experimentado vuela solo en territorio desconocido, ninguna empresa deberia internacionalizarse sin el co-pilot correcto. En Fast Comex, no somos pasajeros de tu exito, somos tu tripulacion de confianza que conoce cada ruta, cada turbulencia y cada destino.
-        </p>
-      </div>
+    <main class="fc-section">
+      <div class="container fc-container-wide">
+        <div class="text-center mx-auto mb-5" style="max-width: 760px;">
+          <span class="fc-badge-red mb-3">Somos tu Co-Piloto Internacional</span>
+          <h2 class="fc-title fc-title-lg text-dark mb-3">
+            Navegamos juntos hacia el <span class="fc-red">éxito global</span>
+          </h2>
+          <p class="fc-text-slate mb-0">
+            Así como ningún piloto experimentado vuela solo en territorio desconocido, ninguna empresa debería internacionalizarse sin el copiloto correcto. En Fast Comex, no somos pasajeros de tu éxito, somos tu tripulación de confianza que conoce cada ruta, cada turbulencia y cada destino.
+          </p>
+        </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-9">
-        <!-- Card 1: Asesoria Internacional -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Equipo multidisciplinario en asesoria de negocios internacionales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/asesoria_internacional_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Estrategia Global</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-earth-americas"></i>
+        <div class="row g-4">
+          <!-- Card 1: Asesoría Internacional -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Equipo multidisciplinario en asesoría de negocios internacionales" src="img_02/---/asesoria_internacional_00.png" />
+                  <span class="fc-service-tag">Estrategia Global</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-earth-americas"></i>
+                  </div>
+                  <h3>Asesoría Internacional</h3>
+                  <p>
+                    La internacionalización de tu negocio es una gran oportunidad, pero puede ser compleja. En Fast Comex, te ofrecemos asesoría internacional experta para ayudarte a navegar el mundo del comercio exterior.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Estudios de factibilidad y mercados destino</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Mitigacion de riesgos cambiarios y comerciales</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Asesoria Internacional
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                La internacionalizacion de tu negocio es una gran oportunidad, pero puede ser compleja. En Fast Comex, te ofrecemos asesoria internacional experta para ayudarte a navegar el mundo del comercio exterior.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Estudios de factibilidad y mercados destino
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Mitigacion de riesgos cambiarios y comerciales
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Solicitar Asesoría</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Solicitar Asesoria</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 2: Analisis y Asesoria Logistica -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Ingeniero logistico optimizando flujos de carga en terminal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/asesoria_logistica_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Optimizacion</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-chart-line"></i>
+          <!-- Card 2: Análisis y Asesoría Logística -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Ingeniero logistico optimizando flujos de carga en terminal" src="img_02/---/asesoria_logistica_00.png" />
+                  <span class="fc-service-tag">Optimización</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h3>Análisis y Asesoría Logística</h3>
+                  <p>
+                    Analizamos y asesoramos procesos de distribución, te ayudamos a reducir costos, tiempos de entrega y riesgos. Nuestro objetivo es asegurarnos de que tu logística sea tan eficiente como tus operaciones.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Diagnóstico y rediseño de cadenas de suministro</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Reducción de mermas y tiempos ociosos</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Analisis y Asesoria Logistica
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                Analisis y Asesoria Logistica procesos de distribucion, te ayudamos a reducir costos, tiempos de entrega y riesgos. Nuestro objetivo es asegurarnos de que tu logistica sea tan eficiente como tus operaciones.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Diagnostico y rediseno de cadenas de suministro
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Reduccion de mermas y tiempos ociosos
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Solicitar Asesoría</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Solicitar Asesoria</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 3: Transporte Internacional -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Embarcaciones de carga y transporte maritimo y aereo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/transporte_internacional_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Multimodal</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-ship"></i>
+          <!-- Card 3: Transporte Internacional -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Embarcaciones de carga y transporte marítimo y aéreo" src="img_02/---/transporte_internacional_00.png" />
+                  <span class="fc-service-tag">Multimodal</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-ship"></i>
+                  </div>
+                  <h3>Transporte Internacional</h3>
+                  <p>
+                    En Fast Comex, gestionamos el transporte aéreo, marítimo y terrestre con los mejores proveedores globales, asegurando que tus productos lleguen a destino de forma segura y puntual.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Flete marítimo FCL / LCL y aéreo consolidado</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Tarifas preferenciales y cupos garantizados</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Transporte Internacional
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                En Fast Comex, gestionamos el transporte aereo, maritimo y terrestre con los mejores proveedores globales, asegurando que tus productos lleguen a destino de forma segura y puntual.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Flete maritimo FCL / LCL y aereo consolidado
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Tarifas preferenciales y cupos garantizados
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Cotizar Transporte</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Cotizar Transporte</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 4: Transporte Nacional Urbano -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Camion de carga pesada en carretera nacional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/transporte_nacional_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Ultima Milla &amp; Troncal</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-truck-fast"></i>
+          <!-- Card 4: Transporte Nacional Urbano -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Camion de carga pesada en carretera nacional" src="img_02/---/transporte_nacional_00.png" />
+                  <span class="fc-service-tag">Ultima Milla &amp; Troncal</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-truck-fast"></i>
+                  </div>
+                  <h3>Transporte Nacional Urbano</h3>
+                  <p>
+                    La internacionalización comienza en casa. Con Fast Comex, gestionamos el transporte nacional urbano, asegurando que tus productos lleguen de forma rápida y eficiente a cualquier destino dentro del país.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Monitoreo satelital GPS 24 horas</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Rutas directas interurbanas y distribución local</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Transporte Nacional Urbano
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                La internacionalizacion comienza en casa. Con Fast Comex, gestionamos el transporte nacional urbano, asegurando que tus productos lleguen de forma rapida y eficiente a cualquier destino dentro del pais.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Monitoreo satelital GPS 24 horas
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Rutas directas interurbanas y distribucion local
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Cotizar Rutas</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Cotizar Rutas</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 5: Bodegaje y Almacenamiento -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Almacen de distribucion logistica y bodegaje de alta capacidad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/bodegaje_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Infraestructura WMS</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-warehouse"></i>
+          <!-- Card 5: Bodegaje y Almacenamiento -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Almacén de distribución logística y bodegaje de alta capacidad" src="img_02/---/bodegaje_00.png" />
+                  <span class="fc-service-tag">Infraestructura WMS</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-warehouse"></i>
+                  </div>
+                  <h3>Bodegaje y Almacenamiento</h3>
+                  <p>
+                    Es vital para la eficiencia de tu cadena de suministro. En Fast Comex, te ofrecemos servicios de bodegaje y almacenamiento en puntos estratégicos, garantizando la seguridad, el acceso rápido.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Control de inventarios en tiempo real</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Instalaciones certificadas y zonas francas</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Bodegaje y Almacenamiento
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                Es vital para la eficiencia de tu cadena de suministro. En Fast Comex, te ofrecemos servicios de bodegaje y almacenamiento en puntos estrategicos, garantizando la seguridad, el acceso rapido.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Control de inventarios en tiempo real
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Instalaciones certificadas y zonas francas
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Consultar Bodegas</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Consultar Bodegas</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 6: Compra y Venta en el Exterior -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Reunion comercial y sourcing de proveedores internacionales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/comprayventa_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Sourcing Global</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-handshake"></i>
+          <!-- Card 6: Compra y Venta en el Exterior -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Reunion comercial y sourcing de proveedores internacionales" src="img_02/---/comprayventa_00.png" />
+                  <span class="fc-service-tag">Sourcing Global</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <h3>Compra y Venta en el Exterior</h3>
+                  <p>
+                    Expandir tu negocio globalmente también implica saber dónde comprar y vender. Te asesoramos en todo el proceso de compra y venta en el exterior, desde la búsqueda de proveedores confiables hasta la venta.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Auditorías en origen y validación de fábricas</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Negociación de Incoterms y contratos de compraventa</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Compra y Venta en el Exterior
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                Expandir tu negocio globalmente tambien implica saber donde comprar y vender. Te asesoramos en todo el proceso de compra y venta en el exterior, desde la busqueda de proveedores confiables hasta la venta.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Auditorias en origen y validacion de fabricas
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Negociacion de Incoterms y contratos de compraventa
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Iniciar Sourcing</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Iniciar Sourcing</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 7: 5PL Soluciones Logisticas -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Centro de operaciones de control integral de logistica 5PL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/5pl_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Externalizacion Total</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-diagram-project"></i>
+          <!-- Card 7: 5PL Soluciones Logísticas -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Centro de operaciones de control integral de logística 5PL" src="img_02/---/5pl_00.png" />
+                  <span class="fc-service-tag">Externalización Total</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-diagram-project"></i>
+                  </div>
+                  <h3>5PL: Soluciones Logisticas</h3>
+                  <p>
+                    Es una solución integral para empresas que buscan externalizar completamente su cadena de suministro. En Fast Comex, te ofrecemos un servicio 5PL que cubre todas las necesidades logísticas.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Gestión orquestada de múltiples operadores</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Integración tecnológica y KPIs centralizados</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                5PL: Soluciones Logisticas
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                Es una solucion integral para empresas que buscan externalizar completamente su cadena de suministro. En Fast Comex, te ofrecemos un servicio 5PL que cubre todas las necesidades logisticas.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Gestion orquestada de multiples operadores
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Integracion tecnologica y KPIs centralizados
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Explorar Plan 5PL</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Explorar Plan 5PL</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 8: Servicios de Aduana -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Inspeccion aduanera y documentacion arancelaria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/aduana_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Compliance Legal</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-file-shield"></i>
+          <!-- Card 8: Servicios de Aduana -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Inspección aduanera y documentación arancelaria" src="img_02/---/aduana_00.png" />
+                  <span class="fc-service-tag">Compliance Legal</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-file-shield"></i>
+                  </div>
+                  <h3>Servicios de Aduana</h3>
+                  <p>
+                    El comercio internacional implica cumplir con una variedad de regulaciones aduaneras, y en Fast Comex, te ayudamos a gestionar todos los servicios de aduana necesarios. Desde la clasificación arancelaria hasta la gestión de impuestos y aranceles.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Clasificación arancelaria y desaduanamiento ágil</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Cumplimiento normativo DIAN y comercio exterior</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Servicios de Aduana
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                El comercio internacional implica cumplir con una variedad de regulaciones aduaneras, y en Fast Comex, te ayudamos a gestionar todos los servicios de aduana necesarios. Desde la clasificacion arancelaria hasta la gestion de impuestos y aranceles.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Clasificacion arancelaria y desaduanamiento agil
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Cumplimiento normativo DIAN y comercio exterior
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Asesoría Aduanera</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Asesoria Aduanera</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
 
-        <!-- Card 9: Paqueteo y Courrier -->
-        <article class="service-card-transition bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col justify-between group" data-purpose="service-item">
-          <div>
-            <div class="relative h-56 overflow-hidden bg-slate-900">
-              <img alt="Operador empacando y entregando envios urgentes de courier express" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img_02/---/paqueteo_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Envios Urgentes</span>
-            </div>
-            <div class="p-6 sm:p-7">
-              <div class="w-12 h-12 rounded-xl bg-red-50 text-brand-red flex items-center justify-center text-xl -mt-12 mb-4 relative z-10 shadow-sm border border-red-100">
-                <i class="fa-solid fa-boxes-packing"></i>
+          <!-- Card 9: Paqueteo y Courrier -->
+          <div class="col-md-6 col-lg-4">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column" data-purpose="service-item">
+              <div class="d-flex flex-column flex-grow-1">
+                <div class="fc-service-media">
+                  <img alt="Operador empacando y entregando envíos urgentes de courier express" src="img_02/---/paqueteo_00.png" />
+                  <span class="fc-service-tag">Envíos Urgentes</span>
+                </div>
+                <div class="fc-service-body flex-grow-1 d-flex flex-column">
+                  <div class="fc-service-icon">
+                    <i class="fas fa-boxes-packing"></i>
+                  </div>
+                  <h3>Paqueteo y Courrier</h3>
+                  <p>
+                    Son esenciales para garantizar que tus productos lleguen en perfecto estado y de manera puntual. En Fast Comex, ofrecemos soluciones de paqueteo personalizadas que protegen tu mercancía durante el transporte.
+                  </p>
+                  <ul class="fc-check-list">
+                    <li><i class="fas fa-circle-check"></i><span>Envíos de muestras comerciales y documentos urgentes</span></li>
+                    <li><i class="fas fa-circle-check"></i><span>Embalaje industrial a medida y seguro de carga</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 class="font-display text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-red transition-colors">
-                Paqueteo y Courrier
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                Son esenciales para garantizar que tus productos lleguen en perfecto estado y de manera puntual. En Fast Comex, ofrecemos soluciones de paqueteo personalizadas que protegen tu mercancia durante el transporte.
-              </p>
-              <ul class="space-y-2 border-t border-slate-100 pt-4 text-xs font-medium text-slate-600">
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Envios de muestras comerciales y documentos urgentes
-                </li>
-                <li class="flex items-center gap-2">
-                  <i class="fa-solid fa-circle-check text-brand-red text-sm"></i>
-                  Embalaje industrial a medida y seguro de carga
-                </li>
-              </ul>
-            </div>
+              <div class="fc-service-footer">
+                <a class="fc-btn" href="contact.html">
+                  <span>Cotizar Courier</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
           </div>
-          <div class="px-6 sm:px-7 pb-6 pt-2">
-            <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-bold uppercase rounded-lg border border-slate-200 text-slate-800 bg-slate-50 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-all" href="contact.html">
-              <span>Cotizar Courier</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </a>
-          </div>
-        </article>
+        </div>
       </div>
     </main>
     <!-- ServicesDirectorySection End -->
 
     <!-- OperationalProcessSection -->
-    <section class="bg-white py-20 border-y border-slate-200" data-purpose="methodology-steps">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="inline-block text-xs uppercase font-extrabold tracking-widest text-brand-red bg-red-50 border border-red-200/60 px-3.5 py-1 rounded-full mb-3">
-            Metodologia Comprobada
-          </span>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Como trabajamos tu operacion internacional?
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base mt-3">
+    <section class="fc-section-sm bg-white border-top border-bottom" data-purpose="methodology-steps">
+      <div class="container fc-container-wide">
+        <div class="text-center mx-auto mb-5" style="max-width: 640px;">
+          <span class="fc-badge-red mb-3">Metodología Comprobada</span>
+          <h2 class="fc-title fc-title-lg text-dark mb-2">¿Cómo trabajamos tu operación internacional?</h2>
+          <p class="fc-text-slate mb-0" style="font-size: 0.9rem;">
             Un flujo de trabajo riguroso disenado para eliminar cuellos de botella y salvaguardar tu inversion.
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-          <div class="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 hover:border-brand-red/40 transition-colors relative">
-            <span class="text-4xl font-black font-display text-slate-300/80 mb-4 block">01</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Diagnostico Inicial</h3>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Evaluamos el tipo de mercancia, partida arancelaria, pais de origen o destino y tiempos requeridos para trazar la ruta idonea.
-            </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="fc-step">
+              <span class="fc-step-number">01</span>
+              <h3>Diagnóstico Inicial</h3>
+              <p>Evaluamos el tipo de mercancía, partida arancelaria, país de origen o destino y tiempos requeridos para trazar la ruta idónea.</p>
+            </div>
           </div>
-          <div class="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 hover:border-brand-red/40 transition-colors relative">
-            <span class="text-4xl font-black font-display text-slate-300/80 mb-4 block">02</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Plan Logistico &amp; Aduanero</h3>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Elaboramos la estructura documental, liquidacion de tributos, reserva de espacios maritimos/aereos y planes de contingencia.
-            </p>
+          <div class="col-md-6 col-lg-3">
+            <div class="fc-step">
+              <span class="fc-step-number">02</span>
+              <h3>Plan Logístico &amp; Aduanero</h3>
+              <p>Elaboramos la estructura documental, liquidacion de tributos, reserva de espacios maritimos/aereos y planes de contingencia.</p>
+            </div>
           </div>
-          <div class="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 hover:border-brand-red/40 transition-colors relative">
-            <span class="text-4xl font-black font-display text-slate-300/80 mb-4 block">03</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Ejecucion &amp; Transito</h3>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Coordinacion directa de recoleccion en fabrica, desaduanamiento de exportacion y monitoreo continuo durante la travesia.
-            </p>
+          <div class="col-md-6 col-lg-3">
+            <div class="fc-step">
+              <span class="fc-step-number">03</span>
+              <h3>Ejecución &amp; Tránsito</h3>
+              <p>Coordinación directa de recolección en fábrica, desaduanamiento de exportación y monitoreo continuo durante la travesía.</p>
+            </div>
           </div>
-          <div class="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 hover:border-brand-red/40 transition-colors relative">
-            <span class="text-4xl font-black font-display text-slate-300/80 mb-4 block">04</span>
-            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Entrega y Cierre</h3>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Nacionalizacion definitiva, transporte terrestre a puerta y entrega de soportes con informe detallado de costos y tiempos.
-            </p>
+          <div class="col-md-6 col-lg-3">
+            <div class="fc-step">
+              <span class="fc-step-number">04</span>
+              <h3>Entrega y Cierre</h3>
+              <p>Nacionalización definitiva, transporte terrestre a puerta y entrega de soportes con informe detallado de costos y tiempos.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -580,22 +474,20 @@
     <!-- OperationalProcessSection End -->
 
     <!-- FastConversionCTA -->
-    <section class="bg-brand-navy py-16 px-4 sm:px-8 relative overflow-hidden text-white" data-purpose="quick-conversion-banner" id="contacto">
-      <div class="absolute inset-0 bg-gradient-to-r from-brand-red/20 via-brand-navy to-brand-navy opacity-80 pointer-events-none"></div>
-      <div class="relative z-10 max-w-5xl mx-auto text-center">
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-4">
-          Tienes una operacion logistica en mente?
-        </h2>
-        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 font-light">
-          Nuestros especialistas en comercio exterior estan listos para analizar tu requerimiento y entregarte una cotizacion a la medida en tiempo record.
+    <section class="fc-bg-navy fc-section-sm text-white position-relative overflow-hidden" data-purpose="quick-conversion-banner" id="contacto">
+      <div class="position-absolute w-100 h-100" style="inset: 0; background: linear-gradient(90deg, rgba(217, 26, 42, 0.2), transparent 60%);"></div>
+      <div class="container fc-container-wide position-relative text-center">
+        <h2 class="fc-title fc-title-lg text-white mb-3">¿Tienes una operación logística en mente?</h2>
+        <p class="fc-text-light mx-auto mb-4" style="max-width: 680px; font-weight: 300;">
+          Nuestros especialistas en comercio exterior están listos para analizar tu requerimiento y entregarte una cotización a la medida en tiempo récord.
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a class="inline-flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
+        <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+          <a class="fc-btn fc-btn-whatsapp" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp fs-5"></i>
             <span>Escribir por WhatsApp</span>
           </a>
-          <a class="inline-flex items-center gap-2.5 bg-brand-red hover:bg-brand-redHover text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-brand-red/30 transition-all text-sm" href="tel:+6015343050">
-            <i class="fa-solid fa-phone-volume text-sm"></i>
+          <a class="fc-btn fc-btn-red" href="tel:+6015343050">
+            <i class="fas fa-phone-volume"></i>
             <span>Llamar a un Asesor</span>
           </a>
         </div>
@@ -604,95 +496,69 @@
     <!-- FastConversionCTA End -->
 
     <!-- CorporateFooter -->
-    <footer class="bg-black text-slate-300 pt-16 pb-8 border-t border-slate-900" data-purpose="corporate-footer">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-slate-800/80">
+    <footer class="fc-footer" data-purpose="corporate-footer">
+      <div class="container fc-container-wide">
+        <div class="row g-4 pb-5 border-bottom border-secondary border-opacity-10">
           <!-- Column 1: Info Institucional -->
-          <div class="md:col-span-5 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-5">
-                <img class="h-10" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex" />
-              </div>
-              <h4 class="font-display text-white text-base font-bold mb-3">Informacion</h4>
-              <p class="text-slate-400 text-sm leading-relaxed max-w-md">
-                Nuestro objetivo es transformar la incertidumbre en confianza, ofreciendo un entorno en el que cada paso en el camino internacional esta respaldado por una red de apoyo solida.
-              </p>
-            </div>
-            <div class="flex items-center gap-3 mt-6">
-              <a aria-label="Facebook" class="w-9 h-9 rounded-full bg-brand-red hover:bg-red-700 text-white flex items-center justify-center transition-colors" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-facebook-f text-sm"></i>
+          <div class="col-md-12 col-lg-5">
+            <img class="mb-3" style="height: 2.5rem;" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex" />
+            <h5 class="fc-title text-white mb-2" style="font-size: 1rem;">Información</h5>
+            <p class="fc-text-muted mb-3" style="font-size: 0.875rem; line-height: 1.7; max-width: 440px;">
+              Nuestro objetivo es transformar la incertidumbre en confianza, ofreciendo un entorno en el que cada paso en el camino internacional esta respaldado por una red de apoyo solida.
+            </p>
+            <div class="d-flex align-items-center gap-2 mt-3">
+              <a aria-label="Facebook" class="fc-social" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a aria-label="X Twitter" class="w-9 h-9 rounded-full bg-brand-red hover:bg-red-700 text-white flex items-center justify-center transition-colors" href="#">
-                <i class="fa-brands fa-x-twitter text-sm"></i>
+              <a aria-label="X Twitter" class="fc-social" href="#">
+                <i class="fa-brands fa-x-twitter"></i>
               </a>
-              <a aria-label="Instagram" class="w-9 h-9 rounded-full bg-brand-red hover:bg-red-700 text-white flex items-center justify-center transition-colors" href="#">
-                <i class="fa-brands fa-instagram text-sm"></i>
+              <a aria-label="Instagram" class="fc-social" href="#">
+                <i class="fa-brands fa-instagram"></i>
               </a>
-              <a aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-brand-red hover:bg-red-700 text-white flex items-center justify-center transition-colors" href="#">
-                <i class="fa-brands fa-linkedin-in text-sm"></i>
+              <a aria-label="LinkedIn" class="fc-social" href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
           </div>
 
           <!-- Column 2: Explorar -->
-          <div class="md:col-span-3">
-            <h4 class="font-display text-white text-base font-bold mb-4 tracking-wide">Explorar</h4>
-            <ul class="space-y-2.5 text-sm">
-              <li>
-                <a class="text-slate-400 hover:text-brand-red transition-colors flex items-center gap-2" href="index.html">
-                  <i class="fa-solid fa-chevron-right text-[10px] text-brand-red"></i>
-                  <span>Inicio</span>
-                </a>
-              </li>
-              <li>
-                <a class="text-slate-400 hover:text-brand-red transition-colors flex items-center gap-2" href="about.html">
-                  <i class="fa-solid fa-chevron-right text-[10px] text-brand-red"></i>
-                  <span>Nosotros</span>
-                </a>
-              </li>
-              <li>
-                <a class="text-slate-400 hover:text-brand-red transition-colors flex items-center gap-2" href="service.html">
-                  <i class="fa-solid fa-chevron-right text-[10px] text-brand-red"></i>
-                  <span>Servicios</span>
-                </a>
-              </li>
-              <li>
-                <a class="text-slate-400 hover:text-brand-red transition-colors flex items-center gap-2" href="contact.html">
-                  <i class="fa-solid fa-chevron-right text-[10px] text-brand-red"></i>
-                  <span>Contacto</span>
-                </a>
-              </li>
+          <div class="col-md-6 col-lg-3">
+            <h5>Explorar</h5>
+            <ul class="fc-footer-list">
+              <li><a href="index.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Inicio</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Nosotros</a></li>
+              <li><a href="service.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Servicios</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Contacto</a></li>
             </ul>
           </div>
 
-          <!-- Column 3: Informacion de Contacto -->
-          <div class="md:col-span-4">
-            <h4 class="font-display text-white text-base font-bold mb-4 tracking-wide">Informacion de contacto</h4>
-            <ul class="space-y-3 text-sm text-slate-400">
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-location-dot text-brand-red mt-1 text-sm"></i>
-                <span><strong>Oficina Principal:</strong> Calle 83 a #21-15, Bogota D.C.</span>
+          <!-- Column 3: Información de Contacto -->
+          <div class="col-md-6 col-lg-4">
+            <h5>Información de contacto</h5>
+            <ul class="fc-footer-contact">
+              <li>
+                <i class="fas fa-location-dot"></i>
+                <span><strong class="text-white">Oficina Principal:</strong> Calle 83 a #21-15, Bogota D.C.</span>
               </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-location-dot text-brand-red mt-1 text-sm"></i>
-                <span><strong>Oficina Zona Franca:</strong> Fontibon, Bogota D.C.</span>
+              <li>
+                <i class="fas fa-location-dot"></i>
+                <span><strong class="text-white">Oficina Zona Franca:</strong> Fontibon, Bogota D.C.</span>
               </li>
-              <li class="flex items-start gap-3">
-                <i class="fa-solid fa-location-dot text-brand-red mt-1 text-sm"></i>
-                <a class="hover:text-white transition-colors" href="https://maps.app.goo.gl/gND5Ls4cyceMCcVy9" target="_blank" rel="noopener noreferrer">
-                  <strong>Oficina China:</strong> Shenzhen &amp; Yiwu Logistics Hubs
-                </a>
+              <li>
+                <i class="fas fa-location-dot"></i>
+                <a href="https://maps.app.goo.gl/gND5Ls4cyceMCcVy9" target="_blank" rel="noopener noreferrer"><strong class="text-white">Oficina China:</strong> Shenzhen &amp; Yiwu Logistics Hubs</a>
               </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-envelope text-brand-red text-sm"></i>
-                <a class="hover:text-white transition-colors" href="mailto:contacto@fast-comex.com">contacto@fast-comex.com</a>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:contacto@fast-comex.com">contacto@fast-comex.com</a>
               </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-phone text-brand-red text-sm"></i>
-                <a class="hover:text-white transition-colors" href="tel:+6015343050">+(601) 534 3050</a>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+6015343050">+(601) 534 3050</a>
               </li>
-              <li class="flex items-center gap-3">
-                <i class="fa-solid fa-print text-brand-red text-sm"></i>
+              <li>
+                <i class="fas fa-print"></i>
                 <span>+(601) 534 3050</span>
               </li>
             </ul>
@@ -700,18 +566,32 @@
         </div>
 
         <!-- Bottom Copyright & Back to Top -->
-        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p class="flex items-center gap-1.5">
-            <i class="fa-regular fa-copyright text-brand-red"></i>
-            <span class="text-brand-red font-semibold">fast-comex</span>. Todos los derechos reservados.
+        <div class="fc-footer-bottom d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+          <p class="mb-0 d-flex align-items-center gap-2">
+            <i class="far fa-copyright fc-red"></i>
+            <span><span class="fc-red fw-semibold">fast-comex</span>. Todos los derechos reservados.</span>
           </p>
-          <a class="inline-flex items-center gap-1.5 text-slate-400 hover:text-brand-red transition-colors font-medium" href="#">
-            <span>Volver arriba</span>
-            <i class="fa-solid fa-arrow-up text-[10px]"></i>
+          <a class="fc-back-top position-static" href="#" style="width: auto; height: auto; border: 0; background: transparent; box-shadow: none; padding: 0;">
+            <span class="me-1">Volver arriba</span>
+            <i class="fas fa-arrow-up"></i>
           </a>
         </div>
       </div>
     </footer>
     <!-- CorporateFooter End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var backTop = document.querySelector(".fc-back-top");
+        if (backTop) {
+          backTop.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+      });
+    </script>
   </body>
 </html>

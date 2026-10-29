@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="es">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -10,69 +10,20 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 
     <!-- Favicon -->
     <link rel="icon" href="/img_02/favicon.ico" />
     <link rel="apple-touch-icon" href="img_02/---/apple-touch.png" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                red: '#DC2626',
-                darkred: '#991B1B',
-                crimson: '#B91C1C',
-                black: '#0B0F17',
-                navy: '#111827',
-                gray: '#F8FAFC',
-                card: '#161F30'
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Space Grotesk', 'sans-serif']
-            }
-          }
-        }
-      };
-    </script>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Font Awesome (brand icons) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
-
-    <!-- Custom CSS -->
-    <style>
-      .hero-glow {
-        background: radial-gradient(circle at 50% 30%, rgba(220, 38, 38, 0.25) 0%, rgba(11, 15, 23, 0.95) 75%);
-      }
-      .custom-ring-effect {
-        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-      }
-      .dot-pattern {
-        background-image: radial-gradient(rgba(220, 38, 38, 0.15) 1px, transparent 1px);
-        background-size: 24px 24px;
-      }
-      .help-block {
-        color: #dc2626;
-        font-size: 0.75rem;
-        margin-top: 0.35rem;
-      }
-      .help-block:empty {
-        display: none;
-      }
-      .control-group.has-error input,
-      .control-group.has-error textarea,
-      .control-group.has-error select {
-        border-color: #dc2626;
-      }
-    </style>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"></script>
@@ -84,132 +35,121 @@
     </script>
   </head>
 
-  <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-red selection:text-white">
+  <body class="fc-body">
     <!-- TopNotificationBar -->
-    <div class="bg-brand-black text-slate-300 text-xs py-2.5 border-b border-white/10" data-purpose="top-utility-bar">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2">
-        <div class="flex flex-wrap items-center gap-y-1 gap-x-6">
-          <a class="flex items-center gap-1.5 hover:text-white transition-colors" href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48" target="_blank" rel="noopener noreferrer">
-            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-red"></i>
-            <span>Calle 83 a #21-15, Bogotá D.C.</span>
-          </a>
-          <a class="flex items-center gap-1.5 hover:text-white transition-colors" href="tel:+6015343050">
-            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-red"></i>
-            <span>+(601) 534 3050</span>
-          </a>
-          <a class="flex items-center gap-1.5 hover:text-white transition-colors" href="mailto:contacto@fast-comex.com">
-            <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-red"></i>
-            <span>contacto@fast-comex.com</span>
-          </a>
-        </div>
-        <div class="flex items-center gap-5">
-          <div class="flex items-center bg-emerald-500/10 text-emerald-400 px-2.5 py-0.5 rounded-full border border-emerald-500/20 text-[11px] font-medium">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
-            Monitoreo Aduanero 24/7 Activo
+    <section class="fc-topbar" data-purpose="top-utility-bar">
+      <div class="container fc-container-wide">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+          <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4">
+            <a class="fc-topbar-item" href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-map-marker-alt fc-red"></i>
+              <span>Calle 83 a #21-15, Bogotá D.C.</span>
+            </a>
+            <a class="fc-topbar-item" href="tel:+6015343050">
+              <i class="fas fa-phone-alt fc-red"></i>
+              <span>+(601) 534 3050</span>
+            </a>
+            <a class="fc-topbar-item" href="mailto:contacto@fast-comex.com">
+              <i class="fas fa-envelope fc-red"></i>
+              <span>contacto@fast-comex.com</span>
+            </a>
           </div>
-          <div class="hidden sm:flex items-center gap-3 text-slate-400">
-            <a aria-label="Facebook" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red hover:text-white flex items-center justify-center transition" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-facebook-f text-[11px]"></i>
-            </a>
-            <a aria-label="Twitter" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red hover:text-white flex items-center justify-center transition" href="#">
-              <i class="fa-brands fa-twitter text-[11px]"></i>
-            </a>
-            <a aria-label="Instagram" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red hover:text-white flex items-center justify-center transition" href="#">
-              <i class="fa-brands fa-instagram text-[11px]"></i>
-            </a>
-            <a aria-label="LinkedIn" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red hover:text-white flex items-center justify-center transition" href="#">
-              <i class="fa-brands fa-linkedin-in text-[11px]"></i>
-            </a>
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2 text-white-50">
+              <span class="fc-live-dot"></span>
+              <span>Monitoreo Aduanero 24/7 Activo</span>
+            </div>
+            <div class="d-none d-sm-flex align-items-center gap-2">
+              <a aria-label="Facebook" class="fc-social-link" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a aria-label="Twitter" class="fc-social-link" href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a aria-label="Instagram" class="fc-social-link" href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a aria-label="LinkedIn" class="fc-social-link" href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- TopNotificationBar End -->
 
     <!-- MainNavbar -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm" data-purpose="primary-navigation">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="h-20 flex items-center justify-between">
-          <a aria-label="Fast Comex Inicio" class="flex items-center gap-3 group" href="index.html">
-            <img class="h-10 w-auto" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex Logo" />
+    <header class="fc-header" data-purpose="primary-navigation">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container fc-container-wide">
+          <a aria-label="Fast Comex Inicio" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="img_02/---/logo_fast_svg.svg" alt="Fast Comex Logo" />
           </a>
-          <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide text-slate-700">
-            <a class="hover:text-brand-red transition-colors py-1" href="index.html">Inicio</a>
-            <a class="hover:text-brand-red transition-colors py-1" href="about.html">Nosotros</a>
-            <a class="hover:text-brand-red transition-colors py-1" href="service.html">Servicios</a>
-            <a class="text-brand-red relative py-1 flex items-center gap-1.5" href="contact.html">
-              Contacto
-              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-red rounded-full"></span>
-            </a>
-          </nav>
-          <div class="hidden sm:flex items-center space-x-3">
-            <a class="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-slate-800 bg-slate-100 hover:bg-slate-200 rounded-lg border border-slate-200 transition-all" href="https://api.whatsapp.com/send?phone=573017265662" rel="noopener noreferrer" target="_blank">
-              <i data-lucide="message-square" class="w-4 h-4 text-emerald-600"></i>
-              <span>WhatsApp</span>
-            </a>
-            <a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-brand-red hover:bg-brand-crimson rounded-lg shadow-sm shadow-brand-red/30 transition-all transform hover:-translate-y-0.5" href="#contacto-form">
-              <span>Cotizar Ahora</span>
-              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-          <button id="mobileMenuButton" aria-label="Abrir menú" aria-expanded="false" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
-            <i data-lucide="menu" class="w-6 h-6"></i>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <i class="fas fa-bars fs-5"></i>
           </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+              <li class="nav-item"><a class="fc-nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="about.html">Nosotros</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="service.html">Servicios</a></li>
+              <li class="nav-item"><a class="fc-nav-link active" href="contact.html">Contacto</a></li>
+            </ul>
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2">
+              <a class="fc-btn fc-btn-sm d-inline-flex align-items-center justify-content-center gap-2 bg-light border text-dark" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp text-success"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a class="fc-btn fc-btn-red fc-btn-sm text-uppercase" href="#contacto-form">
+                <span>Cotizar Ahora</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-4">
-        <nav class="flex flex-col gap-3 text-sm font-semibold text-slate-700">
-          <a class="hover:text-brand-red transition-colors" href="index.html">Inicio</a>
-          <a class="hover:text-brand-red transition-colors" href="about.html">Nosotros</a>
-          <a class="hover:text-brand-red transition-colors" href="service.html">Servicios</a>
-          <a class="text-brand-red" href="contact.html">Contacto</a>
-          <a class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-brand-red rounded-lg" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
-            <i data-lucide="message-square" class="w-4 h-4"></i>
-            <span>WhatsApp</span>
-          </a>
-        </nav>
-      </div>
+      </nav>
     </header>
     <!-- MainNavbar End -->
 
     <main>
       <!-- HeroSection -->
-      <section class="relative bg-brand-black text-white pt-24 pb-28 overflow-hidden" data-purpose="hero-banner">
-        <div class="absolute inset-0 z-0">
-          <img alt="Operación logística y portuaria de Fast Comex" class="w-full h-full object-cover object-center opacity-25 filter brightness-75 contrast-125" src="img_02/---/carrusel_star_01.jpg" />
-          <div class="absolute inset-0 hero-glow"></div>
-          <div class="absolute inset-0 dot-pattern opacity-30"></div>
-        </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs text-slate-300 font-medium mb-6">
-            <a class="hover:text-white transition-colors" href="index.html">Inicio</a>
-            <i data-lucide="chevron-right" class="w-3 h-3 text-slate-400"></i>
-            <span class="text-slate-400">Páginas</span>
-            <i data-lucide="chevron-right" class="w-3 h-3 text-slate-400"></i>
-            <span class="text-brand-red font-semibold">Contacto</span>
-          </nav>
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
-            Hablemos de tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-brand-red to-orange-400">Operación Logística</span>
-          </h1>
-          <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-            Nuestro equipo de especialistas en comercio exterior y logística aduanera está listo para asesorarte, optimizar tus costos y coordinar tus embarques en tiempo récord.
-          </p>
-          <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-white/10 pt-8 text-left">
-            <div class="border-l-2 border-brand-red pl-3">
-              <div class="font-display text-xl font-bold text-white">&lt; 15 min</div>
-              <div class="text-xs text-slate-400">Tiempo de respuesta</div>
-            </div>
-            <div class="border-l-2 border-brand-red pl-3">
-              <div class="font-display text-xl font-bold text-white">+18 Países</div>
-              <div class="text-xs text-slate-400">Conexión directa</div>
-            </div>
-            <div class="border-l-2 border-brand-red pl-3">
-              <div class="font-display text-xl font-bold text-white">3 Sedes</div>
-              <div class="text-xs text-slate-400">Bogotá, Zona Franca, Asia</div>
-            </div>
-            <div class="border-l-2 border-brand-red pl-3">
-              <div class="font-display text-xl font-bold text-white">99.8%</div>
-              <div class="text-xs text-slate-400">Efectividad aduanera</div>
+      <section class="fc-hero" data-purpose="hero-banner">
+        <img alt="Operación logística y portuaria de Fast Comex" class="fc-hero-bg" src="img_02/---/carrusel_star_01.jpg" />
+        <div class="fc-hero-overlay"></div>
+        <div class="fc-hero-pattern"></div>
+        <div class="fc-hero-content fc-hero-min-sm py-5">
+          <div class="container fc-container-wide text-center">
+            <nav class="fc-breadcrumb-pill mb-4">
+              <a href="index.html">Inicio</a>
+              <i class="fas fa-chevron-right fc-red" style="font-size: 0.55rem;"></i>
+              <span>Páginas</span>
+              <i class="fas fa-chevron-right fc-red" style="font-size: 0.55rem;"></i>
+              <span class="text-white fw-semibold">Contacto</span>
+            </nav>
+            <h1 class="fc-title fc-title-xl text-white mb-4">
+              Hablemos de tu <span class="fc-gradient-text">Operación Logística</span>
+            </h1>
+            <p class="mx-auto fc-text-light fs-6" style="max-width: 680px;">
+              Nuestro equipo de especialistas en comercio exterior y logística aduanera está listo para asesorarte, optimizar tus costos y coordinar tus embarques en tiempo récord.
+            </p>
+            <div class="fc-hero-stats">
+              <div class="fc-hero-stat">
+                <strong>&lt; 15 min</strong>
+                <span>Tiempo de respuesta</span>
+              </div>
+              <div class="fc-hero-stat">
+                <strong>+18 Países</strong>
+                <span>Conexión directa</span>
+              </div>
+              <div class="fc-hero-stat">
+                <strong>3 Sedes</strong>
+                <span>Bogotá, Zona Franca, Asia</span>
+              </div>
+              <div class="fc-hero-stat">
+                <strong>99.8%</strong>
+                <span>Efectividad aduanera</span>
+              </div>
             </div>
           </div>
         </div>
@@ -217,34 +157,34 @@
       <!-- HeroSection End -->
 
       <!-- MainContentGrid -->
-      <section class="relative -mt-12 z-20 pb-24" data-purpose="contact-body">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <section class="fc-overlap pb-5" data-purpose="contact-body">
+        <div class="container fc-container-wide">
+          <div class="row g-4 align-items-start">
             <!-- LEFT COLUMN -->
-            <div class="lg:col-span-5 space-y-6">
-              <div class="bg-white rounded-2xl p-7 shadow-xl shadow-slate-200/60 border border-slate-100">
-                <div class="flex items-center gap-2.5 mb-6 text-brand-red font-semibold text-xs uppercase tracking-wider">
-                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <div class="col-lg-5">
+              <div class="fc-card p-4 mb-4">
+                <div class="d-flex align-items-center gap-2 fc-red fw-semibold text-uppercase mb-4" style="font-size: 0.72rem; letter-spacing: 0.08em;">
+                  <i class="fas fa-shield-alt"></i>
                   <span>Canales Corporativos Verificados</span>
                 </div>
-                <h2 class="font-display text-2xl font-bold text-slate-900 mb-2">Presencia Estratégica</h2>
-                <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                <h2 class="fc-title" style="font-size: 1.5rem;">Presencia Estratégica</h2>
+                <p class="fc-text-slate mb-4" style="font-size: 0.875rem;">
                   Coordina tus operaciones en puertos, aeropuertos y depósitos fiscales con nuestros gerentes de cuenta.
                 </p>
 
-                <div class="space-y-4">
+                <div>
                   <!-- Sede Principal -->
-                  <a href="https://maps.app.goo.gl/DA9rYVxa5fttaSgw8" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-brand-red/30 transition-all group">
-                    <div class="flex items-start gap-3.5">
-                      <div class="w-10 h-10 rounded-lg bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                        <i data-lucide="building-2" class="w-5 h-5"></i>
+                  <a href="https://maps.app.goo.gl/DA9rYVxa5fttaSgw8" target="_blank" rel="noopener noreferrer" class="fc-office-card fc-hover-red mb-3">
+                    <div class="d-flex align-items-start gap-3">
+                      <div class="fc-office-icon fc-office-icon-red">
+                        <i class="fas fa-building"></i>
                       </div>
                       <div>
-                        <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-red-100 text-brand-darkred mb-1">Sede Matriz</span>
-                        <h3 class="font-bold text-slate-900 text-sm">Oficina Principal Bogotá</h3>
-                        <p class="text-xs text-slate-600 mt-1">Calle 83 a #21-15, Bogotá D.C., Colombia</p>
-                        <span class="flex items-center gap-1 text-xs text-slate-500 mt-2">
-                          <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-red"></i>
+                        <span class="fc-tag">Sede Matriz</span>
+                        <h3 class="fw-bold text-dark mb-1" style="font-size: 0.875rem;">Oficina Principal Bogotá</h3>
+                        <p class="mb-1 fc-text-slate" style="font-size: 0.75rem;">Calle 83 a #21-15, Bogotá D.C., Colombia</p>
+                        <span class="d-inline-flex align-items-center gap-1 fc-text-muted" style="font-size: 0.72rem;">
+                          <i class="far fa-clock fc-red"></i>
                           Lun - Vie: 7:30 AM - 5:30 PM
                         </span>
                       </div>
@@ -252,17 +192,17 @@
                   </a>
 
                   <!-- Zona Franca -->
-                  <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-brand-red/30 transition-all group">
-                    <div class="flex items-start gap-3.5">
-                      <div class="w-10 h-10 rounded-lg bg-slate-200/70 text-slate-700 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                        <i data-lucide="container" class="w-5 h-5"></i>
+                  <div class="fc-office-card mb-3">
+                    <div class="d-flex align-items-start gap-3">
+                      <div class="fc-office-icon">
+                        <i class="fas fa-box"></i>
                       </div>
                       <div>
-                        <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-200 text-slate-700 mb-1">Operativa &amp; Aduana</span>
-                        <h3 class="font-bold text-slate-900 text-sm">Oficina Zona Franca Bogotá</h3>
-                        <p class="text-xs text-slate-600 mt-1">Atención y coordinación de operaciones</p>
-                        <span class="inline-flex items-center gap-1 text-xs text-slate-500 mt-1.5">
-                          <i data-lucide="phone" class="w-3 h-3"></i>
+                        <span class="fc-tag fc-tag-gray">Operativa &amp; Aduana</span>
+                        <h3 class="fw-bold text-dark mb-1" style="font-size: 0.875rem;">Oficina Zona Franca Bogotá</h3>
+                        <p class="mb-1 fc-text-slate" style="font-size: 0.75rem;">Atención y coordinación de operaciones</p>
+                        <span class="d-inline-flex align-items-center gap-1 fc-text-muted" style="font-size: 0.72rem;">
+                          <i class="fas fa-phone"></i>
                           Coordinación de carga FCL/LCL
                         </span>
                       </div>
@@ -270,17 +210,17 @@
                   </div>
 
                   <!-- China -->
-                  <a href="https://maps.app.goo.gl/gND5Ls4cyceMCcVy9" target="_blank" rel="noopener noreferrer" class="block p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-brand-red/30 transition-all group">
-                    <div class="flex items-start gap-3.5">
-                      <div class="w-10 h-10 rounded-lg bg-slate-200/70 text-slate-700 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                        <i data-lucide="globe-2" class="w-5 h-5"></i>
+                  <a href="https://maps.app.goo.gl/gND5Ls4cyceMCcVy9" target="_blank" rel="noopener noreferrer" class="fc-office-card fc-hover-red">
+                    <div class="d-flex align-items-start gap-3">
+                      <div class="fc-office-icon">
+                        <i class="fas fa-globe"></i>
                       </div>
                       <div>
-                        <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-200 text-slate-700 mb-1">Hub Asiático</span>
-                        <h3 class="font-bold text-slate-900 text-sm">Oficina Enlace China</h3>
-                        <p class="text-xs text-slate-600 mt-1">Enlace y consolidación en Asia</p>
-                        <span class="inline-flex items-center gap-1 text-xs text-slate-500 mt-1.5">
-                          <i data-lucide="check-circle-2" class="w-3 h-3 text-emerald-600"></i>
+                        <span class="fc-tag fc-tag-gray">Hub Asiático</span>
+                        <h3 class="fw-bold text-dark mb-1" style="font-size: 0.875rem;">Oficina Enlace China</h3>
+                        <p class="mb-1 fc-text-slate" style="font-size: 0.75rem;">Enlace y consolidación en Asia</p>
+                        <span class="d-inline-flex align-items-center gap-1 fc-text-muted" style="font-size: 0.72rem;">
+                          <i class="fas fa-check-circle text-success"></i>
                           Acompañamiento en origen
                         </span>
                       </div>
@@ -288,197 +228,180 @@
                   </a>
                 </div>
 
-                <div class="mt-6 pt-6 border-t border-slate-100 space-y-3">
-                  <a class="flex items-center justify-between p-3 rounded-lg bg-slate-100/70 hover:bg-red-50 hover:text-brand-red transition-all group" href="tel:+6015343050">
-                    <div class="flex items-center gap-3">
-                      <div class="p-2 rounded-md bg-white text-slate-700 group-hover:text-brand-red shadow-sm">
-                        <i data-lucide="phone-call" class="w-4 h-4"></i>
+                <div class="border-top mt-4 pt-4">
+                  <a class="fc-contact-quick mb-2" href="tel:+6015343050">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="fc-icon-box">
+                        <i class="fas fa-phone-alt"></i>
                       </div>
                       <div>
-                        <p class="text-xs text-slate-500 font-medium">Línea Directa PBX</p>
-                        <p class="text-sm font-bold text-slate-900 group-hover:text-brand-red">+(601) 534 3050</p>
+                        <p class="mb-0 fc-text-muted" style="font-size: 0.72rem;">Línea Directa PBX</p>
+                        <p class="mb-0 fw-bold text-dark" style="font-size: 0.875rem;">+(601) 534 3050</p>
                       </div>
                     </div>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                    <i class="fas fa-chevron-right fc-chevron"></i>
                   </a>
-                  <a class="flex items-center justify-between p-3 rounded-lg bg-slate-100/70 hover:bg-red-50 hover:text-brand-red transition-all group" href="mailto:contacto@fast-comex.com">
-                    <div class="flex items-center gap-3">
-                      <div class="p-2 rounded-md bg-white text-slate-700 group-hover:text-brand-red shadow-sm">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
+                  <a class="fc-contact-quick" href="mailto:contacto@fast-comex.com">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="fc-icon-box">
+                        <i class="fas fa-envelope"></i>
                       </div>
                       <div>
-                        <p class="text-xs text-slate-500 font-medium">Correo Electrónico</p>
-                        <p class="text-sm font-bold text-slate-900 group-hover:text-brand-red">contacto@fast-comex.com</p>
+                        <p class="mb-0 fc-text-muted" style="font-size: 0.72rem;">Correo Electrónico</p>
+                        <p class="mb-0 fw-bold text-dark" style="font-size: 0.875rem;">contacto@fast-comex.com</p>
                       </div>
                     </div>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                    <i class="fas fa-chevron-right fc-chevron"></i>
                   </a>
                 </div>
               </div>
 
-              <div class="bg-gradient-to-br from-brand-black to-slate-900 text-white rounded-2xl p-6 shadow-xl relative overflow-hidden">
-                <div class="relative z-10">
-                  <div class="flex items-center gap-2 text-brand-red text-xs font-bold uppercase tracking-wider mb-2">
-                    <i data-lucide="award" class="w-4 h-4"></i> Respaldo Institucional
+              <div class="fc-urgent-card">
+                <div class="position-relative" style="z-index: 1;">
+                  <div class="d-flex align-items-center gap-2 fc-red fw-bold text-uppercase mb-2" style="font-size: 0.72rem; letter-spacing: 0.08em;">
+                    <i class="fas fa-award"></i> Respaldo Institucional
                   </div>
-                  <h4 class="font-display font-bold text-lg mb-2">¿Tienes una urgencia aduanera?</h4>
-                  <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                  <h4 class="fc-title text-white mb-2" style="font-size: 1.1rem;">¿Tienes una urgencia aduanera?</h4>
+                  <p class="fc-text-light mb-3" style="font-size: 0.75rem;">
                     Contamos con un equipo de guardia para trámites de desaduanamiento, inspecciones físicas y levantes de mercancía prioritaria.
                   </p>
-                  <a class="inline-flex items-center gap-2 text-xs font-bold bg-white text-brand-black px-4 py-2.5 rounded-lg hover:bg-slate-100 transition-colors" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
-                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+                  <a class="fc-btn fc-btn-sm bg-white text-dark" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp text-success"></i>
                     Contactar Asesor de Guardia
                   </a>
                 </div>
-                <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-brand-red/10 rounded-full blur-2xl"></div>
               </div>
             </div>
 
             <!-- RIGHT COLUMN: Form -->
-            <div class="lg:col-span-7" id="contacto-form">
-              <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-2xl shadow-slate-200/80 border border-slate-200/80" data-purpose="contact-form-card">
-                <div class="border-b border-slate-100 pb-6 mb-8">
-                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-brand-red text-xs font-bold mb-2">
-                    <i data-lucide="send" class="w-3.5 h-3.5"></i> Formulario de Contacto &amp; Cotizaciones
-                  </div>
-                  <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
+            <div class="col-lg-7" id="contacto-form">
+              <div class="fc-form-card" data-purpose="contact-form-card">
+                <div class="border-bottom pb-4 mb-4">
+                  <span class="fc-badge-red mb-2">
+                    <i class="fas fa-paper-plane me-1"></i> Formulario de Contacto &amp; Cotizaciones
+                  </span>
+                  <h3 class="fc-title fc-title-md text-dark mb-2">
                     Inicia tu cotización o consulta técnica
                   </h3>
-                  <p class="text-slate-500 text-sm mt-2">
+                  <p class="fc-text-muted mb-0" style="font-size: 0.875rem;">
                     Diligencia el siguiente formulario y un ejecutivo asignado te contactará con una solución personalizada.
                   </p>
                 </div>
 
                 <div id="alertMessage" aria-live="polite"></div>
 
-                <form id="contactForm" action="mailer/contact.form.php" class="space-y-6" method="POST" novalidate="novalidate">
+                <form id="contactForm" action="mailer/contact.form.php" method="POST" novalidate="novalidate">
                   <!-- Row 1: Name and Email -->
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="control-group">
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="name">
-                        Nombre Completo / Contacto <span class="text-brand-red">*</span>
+                  <div class="row g-3">
+                    <div class="col-sm-6 control-group">
+                      <label class="fc-form-label" for="name">
+                        Nombre Completo / Contacto <span class="fc-red">*</span>
                       </label>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                          <i data-lucide="user" class="w-4 h-4"></i>
-                        </div>
-                        <input class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all outline-none" id="name" name="name" placeholder="Ej: Carlos Mendoza" required="required" type="text" data-validation-required-message="Por favor ingresa tu nombre" />
+                      <div class="fc-input-icon">
+                        <i class="fas fa-user"></i>
+                        <input class="fc-input" id="name" name="name" placeholder="Ej: Carlos Mendoza" required="required" type="text" data-validation-required-message="Por favor ingresa tu nombre" />
                       </div>
-                      <p class="help-block text-danger"></p>
+                      <p class="help-block fc-help-block"></p>
                     </div>
-                    <div class="control-group">
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="email">
-                        Correo Electrónico Corporativo <span class="text-brand-red">*</span>
+                    <div class="col-sm-6 control-group">
+                      <label class="fc-form-label" for="email">
+                        Correo Electrónico Corporativo <span class="fc-red">*</span>
                       </label>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                          <i data-lucide="mail" class="w-4 h-4"></i>
-                        </div>
-                        <input class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all outline-none" id="email" name="email" placeholder="carlos@tuempresa.com" required="required" type="email" data-validation-required-message="Por favor ingresa tu correo" />
+                      <div class="fc-input-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input class="fc-input" id="email" name="email" placeholder="carlos@tuempresa.com" required="required" type="email" data-validation-required-message="Por favor ingresa tu correo" />
                       </div>
-                      <p class="help-block text-danger"></p>
+                      <p class="help-block fc-help-block"></p>
                     </div>
                   </div>
 
                   <!-- Row 2: Phone and Company -->
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="control-group">
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="mobile">
-                        Teléfono / WhatsApp Móvil <span class="text-brand-red">*</span>
+                  <div class="row g-3 mt-1">
+                    <div class="col-sm-6 control-group">
+                      <label class="fc-form-label" for="mobile">
+                        Teléfono / WhatsApp Móvil <span class="fc-red">*</span>
                       </label>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                          <i data-lucide="phone" class="w-4 h-4"></i>
-                        </div>
-                        <input class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all outline-none" id="mobile" name="mobile" placeholder="+57 300 123 4567" required="required" type="tel" pattern="^\+?[\d\s().-]{7,20}$" data-validation-required-message="Por favor ingresa tu teléfono" data-validation-pattern-message="Número de teléfono no válido" />
+                      <div class="fc-input-icon">
+                        <i class="fas fa-phone"></i>
+                        <input class="fc-input" id="mobile" name="mobile" placeholder="+57 300 123 4567" required="required" type="tel" pattern="^\+?[\d\s().-]{7,20}$" data-validation-required-message="Por favor ingresa tu teléfono" data-validation-pattern-message="Número de teléfono no válido" />
                       </div>
-                      <p class="help-block text-danger"></p>
+                      <p class="help-block fc-help-block"></p>
                     </div>
-                    <div class="control-group">
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="company">
-                        Nombre de la Empresa / Razón Social
-                      </label>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                          <i data-lucide="briefcase" class="w-4 h-4"></i>
-                        </div>
-                        <input class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all outline-none" id="company" name="company" placeholder="Importaciones &amp; Distribución S.A.S" type="text" />
+                    <div class="col-sm-6 control-group">
+                      <label class="fc-form-label" for="company">Nombre de la Empresa / Razón Social</label>
+                      <div class="fc-input-icon">
+                        <i class="fas fa-briefcase"></i>
+                        <input class="fc-input" id="company" name="company" placeholder="Importaciones &amp; Distribución S.A.S" type="text" />
                       </div>
-                      <p class="help-block text-danger"></p>
+                      <p class="help-block fc-help-block"></p>
                     </div>
                   </div>
 
                   <!-- Row 3: Service type and Origin/Destination -->
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="control-group">
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="subject">
-                        Tipo de Operación Requerida <span class="text-brand-red">*</span>
+                  <div class="row g-3 mt-1">
+                    <div class="col-sm-6 control-group">
+                      <label class="fc-form-label" for="subject">
+                        Tipo de Operación Requerida <span class="fc-red">*</span>
                       </label>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                          <i data-lucide="layers" class="w-4 h-4"></i>
-                        </div>
-                        <select class="w-full pl-10 pr-8 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all outline-none appearance-none" id="subject" name="subject" required="required" data-validation-required-message="Selecciona el tipo de operación">
-                          <option disabled="disabled" selected="selected" value="">Selecciona una opción...</option>
-                          <option value="Flete Internacional Marítimo (FCL / LCL)">Flete Internacional Marítimo (FCL / LCL)</option>
-                          <option value="Transporte Aéreo Expreso">Transporte Aéreo Expreso</option>
-                          <option value="Agenciamiento Aduanero / Clasificación">Agenciamiento Aduanero / Clasificación</option>
-                          <option value="Consolidación &amp; Hub en China">Consolidación &amp; Hub en China</option>
-                          <option value="Bodegaje &amp; Operación Zona Franca">Bodegaje &amp; Operación Zona Franca</option>
-                          <option value="Asesoría Integral en Comercio Exterior">Asesoría Integral en Comercio Exterior</option>
-                        </select>
-                        <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
-                          <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                      <div class="fc-input-icon">
+                        <i class="fas fa-layer-group"></i>
+                        <div class="fc-select-wrap">
+                          <select class="fc-input" id="subject" name="subject" required="required" data-validation-required-message="Selecciona el tipo de operación">
+                            <option disabled="disabled" selected="selected" value="">Selecciona una opción...</option>
+                            <option value="Flete Internacional Marítimo (FCL / LCL)">Flete Internacional Marítimo (FCL / LCL)</option>
+                            <option value="Transporte Aéreo Expreso">Transporte Aéreo Expreso</option>
+                            <option value="Agenciamiento Aduanero / Clasificación">Agenciamiento Aduanero / Clasificación</option>
+                            <option value="Consolidación &amp; Hub en China">Consolidación &amp; Hub en China</option>
+                            <option value="Bodegaje &amp; Operación Zona Franca">Bodegaje &amp; Operación Zona Franca</option>
+                            <option value="Asesoría Integral en Comercio Exterior">Asesoría Integral en Comercio Exterior</option>
+                          </select>
+                          <i class="fas fa-chevron-down"></i>
                         </div>
                       </div>
-                      <p class="help-block text-danger"></p>
+                      <p class="help-block fc-help-block"></p>
                     </div>
-                    <div class="control-group">
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="origin-dest">
-                        Origen / Destino de la Carga
-                      </label>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                          <i data-lucide="navigation" class="w-4 h-4"></i>
-                        </div>
-                        <input class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all outline-none" id="origin-dest" name="origin" placeholder="Ej: Shanghái -&gt; Buenaventura" type="text" />
+                    <div class="col-sm-6 control-group">
+                      <label class="fc-form-label" for="origin-dest">Origen / Destino de la Carga</label>
+                      <div class="fc-input-icon">
+                        <i class="fas fa-location-arrow"></i>
+                        <input class="fc-input" id="origin-dest" name="origin" placeholder="Ej: Shanghái -&gt; Buenaventura" type="text" />
                       </div>
-                      <p class="help-block text-danger"></p>
+                      <p class="help-block fc-help-block"></p>
                     </div>
                   </div>
 
                   <!-- Row 4: Message -->
-                  <div class="control-group">
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="message">
-                      Detalle del Requerimiento o Mercancía <span class="text-brand-red">*</span>
+                  <div class="control-group mt-3">
+                    <label class="fc-form-label" for="message">
+                      Detalle del Requerimiento o Mercancía <span class="fc-red">*</span>
                     </label>
-                    <textarea class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 transition-all outline-none resize-y" id="message" name="message" placeholder="Describe los detalles de tu carga (tipo de producto, peso/volumen estimado, requerimientos de entrega o cualquier inquietud técnica)..." required="required" rows="4" data-validation-required-message="Por favor describe tu requerimiento"></textarea>
-                    <p class="help-block text-danger"></p>
+                    <textarea class="fc-input" id="message" name="message" placeholder="Describe los detalles de tu carga (tipo de producto, peso/volumen estimado, requerimientos de entrega o cualquier inquietud técnica)..." required="required" rows="4" data-validation-required-message="Por favor describe tu requerimiento"></textarea>
+                    <p class="help-block fc-help-block"></p>
                   </div>
 
                   <!-- Privacy -->
-                  <div class="control-group">
-                    <div class="flex items-start gap-3">
-                      <input class="mt-1 w-4 h-4 text-brand-red border-slate-300 rounded focus:ring-brand-red" id="privacy-policy" name="privacy-policy" required="required" type="checkbox" data-validation-required-message="Debes aceptar la política de tratamiento de datos" />
-                      <label class="text-xs text-slate-500 leading-relaxed cursor-pointer" for="privacy-policy">
-                        Autorizo el tratamiento de mis datos personales de acuerdo con la <a class="text-brand-red underline hover:text-brand-darkred" href="#">Política de Privacidad y Tratamiento de Datos (Ley 1581 de 2012)</a> de Fast Comex S.A.S.
+                  <div class="control-group mt-3">
+                    <div class="d-flex align-items-start gap-2">
+                      <input class="fc-form-check" id="privacy-policy" name="privacy-policy" required="required" type="checkbox" data-validation-required-message="Debes aceptar la política de tratamiento de datos" />
+                      <label class="fc-text-muted mb-0" for="privacy-policy" style="font-size: 0.75rem; line-height: 1.6; cursor: pointer;">
+                        Autorizo el tratamiento de mis datos personales de acuerdo con la <a class="fc-red text-decoration-underline" href="#">Política de Privacidad y Tratamiento de Datos (Ley 1581 de 2012)</a> de Fast Comex S.A.S.
                       </label>
                     </div>
-                    <p class="help-block text-danger"></p>
+                    <p class="help-block fc-help-block"></p>
                   </div>
 
                   <!-- Submit -->
-                  <div>
-                    <button id="sendMessageButton" class="w-full flex items-center justify-center gap-3 bg-brand-red hover:bg-brand-crimson text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-brand-red/25 hover:shadow-brand-red/40 transition-all transform hover:-translate-y-0.5" type="submit">
+                  <div class="mt-4">
+                    <button id="sendMessageButton" class="fc-btn fc-btn-red fc-btn-lg fc-btn-block" type="submit">
                       <span>Enviar Mensaje a Fast Comex</span>
-                      <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                      <i class="fas fa-arrow-right"></i>
                     </button>
                   </div>
 
-                  <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-2 text-xs text-slate-400">
-                    <span class="flex items-center gap-1.5"><i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-500"></i> Cifrado SSL 256-bit</span>
-                    <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i> Contacto en &lt; 15 min</span>
-                    <span class="flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5 text-slate-400"></i> Cero Correo No Deseado</span>
+                  <div class="fc-form-note">
+                    <span><i class="fas fa-lock text-success"></i>Cifrado SSL 256-bit</span>
+                    <span><i class="far fa-clock"></i>Contacto en &lt; 15 min</span>
+                    <span><i class="fas fa-shield-alt"></i>Cero Correo No Deseado</span>
                   </div>
                 </form>
               </div>
@@ -489,59 +412,57 @@
       <!-- MainContentGrid End -->
 
       <!-- CoverageAndPortsSection -->
-      <section class="bg-slate-100 py-20 border-t border-slate-200" data-purpose="strategic-ports-coverage">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center max-w-2xl mx-auto mb-14">
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-red bg-red-100/70 px-3 py-1 rounded-full">
-              Cobertura Nacional &amp; Global
-            </span>
-            <h3 class="font-display text-3xl font-bold text-slate-900 mt-3">
+      <section class="fc-soft-bg fc-section-sm border-top" data-purpose="strategic-ports-coverage">
+        <div class="container fc-container-wide">
+          <div class="text-center mb-5 mx-auto" style="max-width: 680px;">
+            <span class="fc-badge-red">Cobertura Nacional &amp; Global</span>
+            <h3 class="fc-title fc-title-lg text-dark mt-3">
               Puntos Clave de Operación Aduanera
             </h3>
-            <p class="text-sm text-slate-600 mt-2">
+            <p class="fc-text-slate mt-2 mb-0" style="font-size: 0.875rem;">
               Disponemos de personal calificado y alianzas estratégicas en los nodos portuarios y aeroportuarios más relevantes para el comercio exterior.
             </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm hover:border-brand-red/40 hover:shadow-md transition-all group">
-              <div class="w-10 h-10 rounded-lg bg-red-50 text-brand-red flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                <i data-lucide="anchor" class="w-5 h-5"></i>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="fc-coverage-card">
+                <div class="fc-icon-box">
+                  <i class="fas fa-anchor"></i>
+                </div>
+                <h4>Puerto de Cartagena</h4>
+                <p class="fc-coverage-sub">SPRC &amp; Contecar</p>
+                <p>Gestión integral de inspecciones DIAN, INVIMA, ICA y desconsolidación de carga para el Caribe.</p>
               </div>
-              <h4 class="font-bold text-slate-900 text-base mb-1">Puerto de Cartagena</h4>
-              <p class="text-xs text-slate-500 mb-3">SPRC &amp; Contecar</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Gestión integral de inspecciones DIAN, INVIMA, ICA y desconsolidación de carga para el Caribe.
-              </p>
             </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm hover:border-brand-red/40 hover:shadow-md transition-all group">
-              <div class="w-10 h-10 rounded-lg bg-red-50 text-brand-red flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                <i data-lucide="ship" class="w-5 h-5"></i>
+            <div class="col-md-6 col-lg-3">
+              <div class="fc-coverage-card">
+                <div class="fc-icon-box">
+                  <i class="fas fa-ship"></i>
+                </div>
+                <h4>Puerto de Buenaventura</h4>
+                <p class="fc-coverage-sub">SPBUN, TCBUEN &amp; Aguadulce</p>
+                <p>Arribo preferente desde Asia y la cuenca del Pacífico con enlace a transporte terrestre OTM/DTA.</p>
               </div>
-              <h4 class="font-bold text-slate-900 text-base mb-1">Puerto de Buenaventura</h4>
-              <p class="text-xs text-slate-500 mb-3">SPBUN, TCBUEN &amp; Aguadulce</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Arribo preferente desde Asia y la cuenca del Pacífico con enlace a transporte terrestre OTM/DTA.
-              </p>
             </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm hover:border-brand-red/40 hover:shadow-md transition-all group">
-              <div class="w-10 h-10 rounded-lg bg-red-50 text-brand-red flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                <i data-lucide="plane-takeoff" class="w-5 h-5"></i>
+            <div class="col-md-6 col-lg-3">
+              <div class="fc-coverage-card">
+                <div class="fc-icon-box">
+                  <i class="fas fa-plane-departure"></i>
+                </div>
+                <h4>Bogotá El Dorado</h4>
+                <p class="fc-coverage-sub">Terminal de Carga Aérea</p>
+                <p>Manejo de carga crítica, Courier comercial, insumos farmacéuticos y repuestos industriales express.</p>
               </div>
-              <h4 class="font-bold text-slate-900 text-base mb-1">Bogotá El Dorado</h4>
-              <p class="text-xs text-slate-500 mb-3">Terminal de Carga Aérea</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Manejo de carga crítica, Courier comercial, insumos farmacéuticos y repuestos industriales express.
-              </p>
             </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm hover:border-brand-red/40 hover:shadow-md transition-all group">
-              <div class="w-10 h-10 rounded-lg bg-red-50 text-brand-red flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                <i data-lucide="warehouse" class="w-5 h-5"></i>
+            <div class="col-md-6 col-lg-3">
+              <div class="fc-coverage-card">
+                <div class="fc-icon-box">
+                  <i class="fas fa-warehouse"></i>
+                </div>
+                <h4>Hubs Shenzhen &amp; Ningbo</h4>
+                <p class="fc-coverage-sub">Bodegas de Origen en Asia</p>
+                <p>Verificación física de proveedores en fábrica, consolidación multimodal y precintos certificados.</p>
               </div>
-              <h4 class="font-bold text-slate-900 text-base mb-1">Hubs Shenzhen &amp; Ningbo</h4>
-              <p class="text-xs text-slate-500 mb-3">Bodegas de Origen en Asia</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Verificación física de proveedores en fábrica, consolidación multimodal y precintos certificados.
-              </p>
             </div>
           </div>
         </div>
@@ -550,112 +471,90 @@
     </main>
 
     <!-- MainFooter -->
-    <footer class="bg-brand-black text-slate-300 pt-16 pb-8 border-t border-white/10" data-purpose="site-footer">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-white/10">
+    <footer class="fc-footer" data-purpose="site-footer">
+      <div class="container fc-container-wide">
+        <div class="row g-4 pb-5 border-bottom border-secondary border-opacity-10">
           <!-- Brand Info -->
-          <div class="lg:col-span-4 space-y-4">
-            <div class="flex items-center gap-3">
-              <img class="h-10" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex" />
-            </div>
-            <p class="text-xs font-semibold text-brand-red uppercase tracking-widest">Información</p>
-            <p class="text-sm text-slate-400 leading-relaxed pr-6">
+          <div class="col-md-6 col-lg-4">
+            <img class="mb-3" style="height: 2.5rem;" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex" />
+            <p class="fc-eyebrow mb-2">Información</p>
+            <p class="fc-text-muted mb-3" style="font-size: 0.875rem; line-height: 1.7;">
               Nuestro objetivo es transformar la incertidumbre en confianza, ofreciendo un entorno en el que cada paso en el camino internacional está respaldado por una red de apoyo sólida, transparente y tecnológicamente ágil.
             </p>
-            <div class="pt-2 flex flex-wrap items-center gap-3">
-              <div class="flex items-center gap-1.5 text-xs text-slate-400">
-                <i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Cobertura Global
-              </div>
-              <span class="text-white/20">•</span>
-              <div class="flex items-center gap-1.5 text-xs text-slate-400">
-                <i data-lucide="check" class="w-4 h-4 text-brand-red"></i> Operador Logístico
-              </div>
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <span class="d-flex align-items-center gap-1 fc-text-muted" style="font-size: 0.72rem;">
+                <i class="fas fa-check fc-red"></i> Cobertura Global
+              </span>
+              <span class="text-white-50">•</span>
+              <span class="d-flex align-items-center gap-1 fc-text-muted" style="font-size: 0.72rem;">
+                <i class="fas fa-check fc-red"></i> Operador Logístico
+              </span>
             </div>
           </div>
 
           <!-- Explore -->
-          <div class="lg:col-span-3 space-y-3">
-            <p class="text-sm font-bold text-white uppercase tracking-wider mb-2">Explorar</p>
-            <ul class="space-y-2.5 text-sm text-slate-400">
-              <li>
-                <a class="hover:text-brand-red transition-colors flex items-center gap-2" href="index.html">
-                  <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-brand-red"></i> Inicio
-                </a>
-              </li>
-              <li>
-                <a class="hover:text-brand-red transition-colors flex items-center gap-2" href="about.html">
-                  <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-brand-red"></i> Nosotros
-                </a>
-              </li>
-              <li>
-                <a class="hover:text-brand-red transition-colors flex items-center gap-2" href="service.html">
-                  <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-brand-red"></i> Servicios
-                </a>
-              </li>
-              <li>
-                <a class="hover:text-brand-red transition-colors flex items-center gap-2" href="contact.html">
-                  <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-brand-red"></i> Contacto
-                </a>
-              </li>
+          <div class="col-md-6 col-lg-3">
+            <h5>Explorar</h5>
+            <ul class="fc-footer-list">
+              <li><a href="index.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Inicio</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Nosotros</a></li>
+              <li><a href="service.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Servicios</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Contacto</a></li>
             </ul>
           </div>
 
           <!-- Contact Info -->
-          <div class="lg:col-span-5 space-y-3">
-            <p class="text-sm font-bold text-white uppercase tracking-wider mb-2">Información de Contacto</p>
-            <div class="space-y-2.5 text-sm text-slate-400">
-              <div class="flex items-start gap-2.5">
-                <i data-lucide="map-pin" class="w-4 h-4 text-brand-red shrink-0 mt-1"></i>
-                <span><strong>Oficina Principal:</strong> Calle 83 a #21-15, Bogotá D.C., Colombia</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <i data-lucide="map-pin" class="w-4 h-4 text-brand-red shrink-0 mt-1"></i>
-                <span><strong>Oficina Zona Franca</strong></span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <i data-lucide="map-pin" class="w-4 h-4 text-brand-red shrink-0 mt-1"></i>
-                <a class="hover:text-white transition-colors" href="https://maps.app.goo.gl/gND5Ls4cyceMCcVy9" target="_blank" rel="noopener noreferrer">
-                  <strong>Oficina China</strong>
-                </a>
-              </div>
-              <div class="flex items-center gap-2.5 pt-1">
-                <i data-lucide="mail" class="w-4 h-4 text-brand-red shrink-0"></i>
-                <a class="hover:text-white transition-colors" href="mailto:contacto@fast-comex.com">contacto@fast-comex.com</a>
-              </div>
-              <div class="flex items-center gap-2.5">
-                <i data-lucide="phone" class="w-4 h-4 text-brand-red shrink-0"></i>
-                <a class="hover:text-white transition-colors" href="tel:+6015343050">+(601) 534 3050</a>
-              </div>
-              <div class="flex items-center gap-2.5">
-                <i data-lucide="printer" class="w-4 h-4 text-brand-red shrink-0"></i>
+          <div class="col-md-12 col-lg-5">
+            <h5>Información de Contacto</h5>
+            <ul class="fc-footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong class="text-white">Oficina Principal:</strong> Calle 83 a #21-15, Bogotá D.C., Colombia</span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong class="text-white">Oficina Zona Franca</strong></span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://maps.app.goo.gl/gND5Ls4cyceMCcVy9" target="_blank" rel="noopener noreferrer"><strong class="text-white">Oficina China</strong></a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:contacto@fast-comex.com">contacto@fast-comex.com</a>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+6015343050">+(601) 534 3050</a>
+              </li>
+              <li>
+                <i class="fas fa-print"></i>
                 <span>+(601) 534 3050 (Fax / PBX)</span>
-              </div>
-            </div>
-            <div class="pt-4 flex items-center space-x-3">
-              <a aria-label="Facebook" class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-white hover:text-brand-red transition-all shadow-sm" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-2 pt-3">
+              <a aria-label="Facebook" class="fc-social" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a aria-label="Twitter" class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-white hover:text-brand-red transition-all shadow-sm" href="#">
+              <a aria-label="Twitter" class="fc-social" href="#">
                 <i class="fa-brands fa-twitter"></i>
               </a>
-              <a aria-label="Instagram" class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-white hover:text-brand-red transition-all shadow-sm" href="#">
+              <a aria-label="Instagram" class="fc-social" href="#">
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-white hover:text-brand-red transition-all shadow-sm" href="#">
+              <a aria-label="LinkedIn" class="fc-social" href="#">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p class="flex items-center gap-1">
-            <span class="text-brand-red font-bold">© Fast-comex.com</span>, Todos los derechos reservados.
-          </p>
-          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <a class="hover:text-slate-400 transition-colors" href="#">Términos del Servicio</a>
-            <a class="hover:text-slate-400 transition-colors" href="#">Tratamiento de Datos</a>
-            <a class="hover:text-slate-400 transition-colors" href="service.html">Seguridad Logística</a>
+        <div class="fc-footer-bottom d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+          <p class="mb-0"><span class="fc-red fw-bold">© Fast-comex.com</span>, Todos los derechos reservados.</p>
+          <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+            <a href="#">Términos del Servicio</a>
+            <a href="#">Tratamiento de Datos</a>
+            <a href="service.html">Seguridad Logística</a>
           </div>
         </div>
       </div>
@@ -663,29 +562,22 @@
     <!-- MainFooter End -->
 
     <!-- Back to Top -->
-    <a aria-label="Volver arriba" class="fixed bottom-6 right-6 w-11 h-11 bg-white text-slate-800 rounded-full shadow-lg border border-slate-200 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all z-40 group" href="#">
-      <i data-lucide="arrow-up" class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform"></i>
+    <a aria-label="Volver arriba" class="fc-back-top" href="#">
+      <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="mailer/validation.form.js"></script>
     <script src="mailer/contact.form.js"></script>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        if (window.lucide) {
-          window.lucide.createIcons();
-        }
-
-        var mobileMenuButton = document.getElementById("mobileMenuButton");
-        var mobileMenu = document.getElementById("mobileMenu");
-
-        if (mobileMenuButton && mobileMenu) {
-          mobileMenuButton.addEventListener("click", function () {
-            var isOpen = !mobileMenu.classList.contains("hidden");
-            mobileMenu.classList.toggle("hidden");
-            mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+        var backTop = document.querySelector(".fc-back-top");
+        if (backTop) {
+          backTop.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
           });
         }
       });

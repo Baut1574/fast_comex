@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -10,61 +10,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 
     <!-- Favicon -->
     <link rel="icon" href="/img_02/favicon.ico" />
-    <link href="assets/img_02/---/apple-touch" rel="apple-touch" />
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-              display: ['"Space Grotesk"', 'sans-serif'],
-            },
-            colors: {
-              brand: {
-                red: '#D91A2A',
-                redDark: '#B31220',
-                redDeep: '#870B16',
-                dark: '#0A0E17',
-                surface: '#111827',
-                card: '#161F30',
-                accent: '#EF4444',
-                softGray: '#F8FAFC'
-              }
-            }
-          }
-        }
-      }
-    </script>
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Custom Styles -->
-    <style>
-      .text-glow { text-shadow: 0 0 25px rgba(217, 26, 42, 0.45); }
-      .hero-glow-overlay { background: radial-gradient(circle at 50% 40%, rgba(217, 26, 42, 0.18) 0%, rgba(10, 14, 23, 0.88) 65%, #0A0E17 100%); }
-      .card-hover-border { transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
-      .card-hover-border:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -10px rgba(217, 26, 42, 0.18); }
-      .quote-service { min-height: 76px; border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.04); color: #cbd5e1; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
-      .quote-service:hover:not([aria-pressed="true"]) { border-color: rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.08); color: #fff; transform: translateY(-1px); }
-      .quote-service[aria-pressed="true"] { border-color: #D91A2A; background-color: #D91A2A; color: #fff; box-shadow: 0 5px 16px rgba(217, 26, 42, 0.28); }
-      .quote-service:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-      .quote-service-icon { color: #f87171; }
-      .quote-service[aria-pressed="true"] .quote-service-icon { color: #fff; }
-      @keyframes ping-slow { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.8); opacity: 0; } 100% { transform: scale(1); opacity: 0.8; } }
-      .animate-ping-slow { animation: ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite; }
-    </style>
+    <link rel="apple-touch-icon" href="img_02/---/apple-touch.png" />
 
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -77,461 +30,481 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-SFH3B7H138');
+    </script>
   </head>
 
-  <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFH3B7H138"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-SFH3B7H138");
-  </script>
-
-  <body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-red selection:text-white">
+  <body class="fc-body">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-        <span class="sr-only">Cargando...</span>
+      <div class="spinner-border text-danger" style="width: 3rem; height: 3rem" role="status">
+        <span class="visually-hidden">Cargando...</span>
       </div>
     </div>
     <!-- Spinner End -->
 
     <!-- TopBar -->
-    <section class="bg-brand-dark text-slate-300 text-xs py-2.5 border-b border-slate-800/80 tracking-wide">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2">
-        <div class="flex flex-wrap items-center gap-y-1 gap-x-6 text-slate-300">
-          <a class="inline-flex items-center gap-1.5 hover:text-white transition" href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48" target="_blank">
-            <i class="fas fa-map-marker-alt text-brand-red"></i>
-            <span>Calle 83 # #21-15, Bogotá, Colombia</span>
-          </a>
-          <a class="inline-flex items-center gap-1.5 hover:text-white transition" href="tel:+6015343050">
-            <i class="fas fa-phone-alt text-brand-red"></i>
-            <span>+(601) 534 3050</span>
-          </a>
-          <a class="inline-flex items-center gap-1.5 hover:text-white transition" href="mailto:contacto@fast-comex.com">
-            <i class="fas fa-envelope text-brand-red"></i>
-            <span>contacto@fast-comex.com</span>
-          </a>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="flex items-center gap-2 text-slate-400 border-r border-slate-700 pr-4">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span class="text-[11px] font-medium text-slate-300">Monitoreo 24/7 Activo</span>
+    <section class="fc-topbar" data-purpose="top-utility-bar">
+      <div class="container fc-container-wide">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+          <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4">
+            <a class="fc-topbar-item" href="https://maps.app.goo.gl/QPT5cxru7RjwQzV48" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-map-marker-alt fc-red"></i>
+              <span>Calle 83 a #21-15, Bogotá D.C.</span>
+            </a>
+            <a class="fc-topbar-item" href="tel:+6015343050">
+              <i class="fas fa-phone-alt fc-red"></i>
+              <span>+(601) 534 3050</span>
+            </a>
+            <a class="fc-topbar-item" href="mailto:contacto@fast-comex.com">
+              <i class="fas fa-envelope fc-red"></i>
+              <span>contacto@fast-comex.com</span>
+            </a>
           </div>
-          <div class="flex items-center gap-3">
-            <a aria-label="Facebook" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red text-slate-300 hover:text-white flex items-center justify-center transition" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank">
-              <i class="fab fa-facebook-f text-xs"></i>
-            </a>
-            <a aria-label="Instagram" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red text-slate-300 hover:text-white flex items-center justify-center transition" href="#">
-              <i class="fab fa-instagram text-xs"></i>
-            </a>
-            <a aria-label="LinkedIn" class="w-7 h-7 rounded-full bg-slate-800/80 hover:bg-brand-red text-slate-300 hover:text-white flex items-center justify-center transition" href="#">
-              <i class="fab fa-linkedin-in text-xs"></i>
-            </a>
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2 text-white-50">
+              <span class="fc-live-dot"></span>
+              <span>Monitoreo 24/7 Activo</span>
+            </div>
+            <div class="d-none d-sm-flex align-items-center gap-2">
+              <a aria-label="Facebook" class="fc-social-link" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a aria-label="Instagram" class="fc-social-link" href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a aria-label="LinkedIn" class="fc-social-link" href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- TopBar End -->
 
     <!-- MainHeader -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          <a aria-label="Fast Comex Inicio" class="flex items-center gap-3 group" href="index.html">
-            <img class="h-10" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex Logo" />
+    <header class="fc-header" data-purpose="primary-navigation">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container fc-container-wide">
+          <a aria-label="Fast Comex Inicio" class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="img_02/---/logo_fast_svg.svg" alt="Fast Comex Logo" />
           </a>
-          <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
-            <a class="px-3 py-2 text-sm font-semibold text-brand-red relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-brand-red" href="index.html">Inicio</a>
-            <a class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-red transition" href="about.html">Nosotros</a>
-            <a class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-red transition" href="service.html">Servicios</a>
-            <a class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-red transition" href="contact.html">Contacto</a>
-          </nav>
-          <div class="flex items-center gap-3">
-            <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-900 hover:bg-brand-red text-white shadow-md hover:shadow-brand-red/30 transition-all duration-300" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-whatsapp text-emerald-400"></i>
-              <span>Whatsapp</span>
-            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <i class="fas fa-bars fs-5"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+              <li class="nav-item"><a class="fc-nav-link active" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="about.html">Nosotros</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="service.html">Servicios</a></li>
+              <li class="nav-item"><a class="fc-nav-link" href="contact.html">Contacto</a></li>
+            </ul>
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2">
+              <a class="fc-btn fc-btn-sm d-inline-flex align-items-center justify-content-center gap-2 bg-light border text-dark" href="https://api.whatsapp.com/send?phone=573017265662" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp text-success"></i>
+                <span>Whatsapp</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
     </header>
+    <!-- MainHeader End -->
 
-    <!-- Hero Section -->
-    <section class="relative bg-brand-dark overflow-hidden min-h-[640px] flex items-center justify-center text-white">
-      <div class="absolute inset-0 z-0">
-        <img alt="Infraestructura portuaria y logística internacional marítima" class="w-full h-full object-cover object-center opacity-30 transform scale-105" src="img_02/---/carrusel_star_01.jpg" />
-        <div class="absolute inset-0 hero-glow-overlay"></div>
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
-      </div>
-      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-semibold text-slate-200 mb-6 uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
-          Comercio Exterior 4.0 &amp; Logística Integral
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] max-w-4xl mx-auto text-glow text-white">
-          Transformamos tus Ideas en <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-300">Negocios Globales</span>
-        </h1>
-        <p class="mt-6 text-lg sm:text-xl text-slate-300 font-normal max-w-2xl mx-auto leading-relaxed">
-          Ecosistema que simplifica y potencia tu comercio internacional con agilidad, soporte técnico y tecnología.
-        </p>
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a class="px-8 py-3.5 rounded-xl text-base font-bold bg-brand-red hover:bg-brand-redDark text-white shadow-xl shadow-brand-red/30 transition transform hover:-translate-y-0.5 flex items-center gap-2" href="service.html">
-            <span>Explorar Soluciones</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <a class="px-8 py-3.5 rounded-xl text-base font-bold bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition transform hover:-translate-y-0.5" href="#cotizador">
-            Cotizar Operación
-          </a>
-        </div>
-        <div class="mt-10 max-w-4xl mx-auto w-full bg-slate-900/90 backdrop-blur-xl border border-white/15 rounded-3xl p-6 sm:p-8 shadow-2xl text-left relative z-20" id="cotizador">
-          <div class="mb-6 pb-5 border-b border-white/10">
-            <div class="flex items-start gap-3">
-              <span class="mt-1.5 w-2.5 h-2.5 rounded-full bg-brand-red animate-ping shrink-0"></span>
-              <div>
-                <h2 class="text-base sm:text-lg font-bold text-white">Cotizador y solicitud directa a Fast Comex</h2>
-                <p class="text-xs text-slate-400 mt-1">Ingresa los datos de tu envío para conectar con nuestro equipo de operaciones.</p>
-              </div>
-            </div>
-            <fieldset class="mt-5">
-              <legend class="mb-2.5 text-xs font-semibold uppercase text-slate-300">Selecciona el servicio</legend>
-              <div aria-label="Tipo de servicio" class="grid grid-cols-2 lg:grid-cols-4 gap-2.5" role="group">
-                <button aria-pressed="true" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Marítimo (FCL/LCL)" type="button">
-                  <i class="quote-service-icon fas fa-ship w-5 text-center text-base" aria-hidden="true"></i>
-                  <span><span class="block text-xs sm:text-sm font-bold">Marítimo</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">FCL / LCL</span></span>
-                </button>
-                <button aria-pressed="false" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Aéreo Express" type="button">
-                  <i class="quote-service-icon fas fa-plane w-5 text-center text-base" aria-hidden="true"></i>
-                  <span><span class="block text-xs sm:text-sm font-bold">Aéreo</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">Carga express</span></span>
-                </button>
-                <button aria-pressed="false" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Terrestre / OTM" type="button">
-                  <i class="quote-service-icon fas fa-truck w-5 text-center text-base" aria-hidden="true"></i>
-                  <span><span class="block text-xs sm:text-sm font-bold">Terrestre</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">Transporte / OTM</span></span>
-                </button>
-                <button aria-pressed="false" class="quote-service flex items-center gap-3 rounded-xl px-3 py-3 text-left" data-service="Aduanas" type="button">
-                  <i class="quote-service-icon fas fa-file-invoice w-5 text-center text-base" aria-hidden="true"></i>
-                  <span><span class="block text-xs sm:text-sm font-bold">Aduanas</span><span class="mt-0.5 block text-[10px] sm:text-[11px] opacity-75">Gestión aduanera</span></span>
-                </button>
-              </div>
-            </fieldset>
+    <!-- HomeHeroSection -->
+    <section class="fc-hero fc-home-hero" data-purpose="hero-home">
+      <img alt="Infraestructura portuaria y logística internacional marítima" class="fc-hero-bg" src="img_02/---/carrusel_star_01.jpg" />
+      <div class="fc-hero-overlay"></div>
+      <div class="fc-hero-pattern"></div>
+      <div class="fc-hero-content">
+        <div class="container fc-container-wide text-center">
+          <div class="fc-badge mb-4">
+            <span class="fc-live-dot"></span>
+            <span>Comercio Exterior 4.0 &amp; Logística Integral</span>
           </div>
-          <form class="space-y-5" id="quote-form">
-            <input id="quote-service-value" name="servicio" type="hidden" value="Marítimo (FCL/LCL)" />
-            <fieldset>
-              <legend class="mb-3 text-xs font-bold uppercase text-slate-300">Detalles del envío</legend>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="space-y-1.5">
-                <label class="block text-xs font-semibold text-slate-300" for="quote-origin">Origen</label>
-                <select class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-red" id="quote-origin" name="origen" required>
-                  <option value="">Selecciona origen</option>
-                  <option>Ningbo / Shanghai, China</option>
-                  <option>Miami, Estados Unidos</option>
-                  <option>Rotterdam / Hamburgo, Europa</option>
-                  <option>Ciudad de Panamá, Panamá</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div class="space-y-1.5">
-                <label class="block text-xs font-semibold text-slate-300" for="quote-destination">Destino</label>
-                <select class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-red" id="quote-destination" name="destino" required>
-                  <option value="">Selecciona destino</option>
-                  <option>Bogotá D.C. (Aeropuerto / Zona Franca)</option>
-                  <option>Cartagena (SPRC / Contecar)</option>
-                  <option>Buenaventura (Aguadulce / SPRB)</option>
-                  <option>Medellín / Rionegro</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div class="space-y-1.5">
-                <label class="block text-xs font-semibold text-slate-300" for="quote-cargo">Tipo de carga</label>
-                <select class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white focus:outline-none focus:border-brand-red" id="quote-cargo" name="carga" required>
-                  <option value="">Selecciona tipo de carga</option>
-                  <option>Carga general (seca)</option>
-                  <option>Refrigerada / perecedera</option>
-                  <option>Peligrosa (IMO / químicos)</option>
-                  <option>Paquetería y muestras</option>
-                </select>
-              </div>
-              <div class="space-y-1.5">
-                <label class="block text-xs font-semibold text-slate-300" for="quote-volume">Modalidad / volumen</label>
-                <input class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-volume" name="volumen" placeholder="Ej. 1 contenedor 40' HQ" required />
-              </div>
-            </div>
-            </fieldset>
-            <div class="pt-4 border-t border-white/10">
-              <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
-                <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Datos de contacto para tu propuesta</span>
-                <span class="text-[11px] text-slate-400">Cotización personalizada</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div class="space-y-1.5">
-                  <label class="block text-xs font-semibold text-slate-300" for="quote-name">Nombre / empresa</label>
-                  <input autocomplete="name" class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-name" name="nombre" placeholder="Nombre o empresa" required />
-                </div>
-                <div class="space-y-1.5">
-                  <label class="block text-xs font-semibold text-slate-300" for="quote-email">Correo corporativo</label>
-                  <input autocomplete="email" class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-email" name="correo" placeholder="contacto@empresa.com" required type="email" />
-                </div>
-                <div class="space-y-1.5">
-                  <label class="block text-xs font-semibold text-slate-300" for="quote-phone">Teléfono / WhatsApp</label>
-                  <input autocomplete="tel" class="w-full px-3 py-2.5 bg-slate-800 border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-red" id="quote-phone" name="telefono" placeholder="+57 300 123 4567" required type="tel" />
+          <h1 class="fc-title fc-title-xl text-white mx-auto mb-4" style="max-width: 980px;">
+            Transformamos tus Ideas en <span class="fc-gradient-text">Negocios Globales</span>
+          </h1>
+          <p class="fc-text-light mx-auto mb-4" style="max-width: 700px; font-size: 1.05rem; font-weight: 300;">
+            Ecosistema que simplifica y potencia tu comercio internacional con agilidad, soporte técnico y tecnología.
+          </p>
+          <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+            <a class="fc-btn fc-btn-red fc-btn-lg" href="service.html">
+              <span>Explorar Soluciones</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a class="fc-btn fc-btn-outline-light fc-btn-lg" href="#cotizador">Cotizar Operación</a>
+          </div>
+
+          <div class="fc-quote-card mx-auto mt-5" id="cotizador">
+            <div class="mb-4 pb-3 border-bottom border-secondary border-opacity-25">
+              <div class="d-flex align-items-start gap-3">
+                <span class="fc-live-dot mt-1 flex-shrink-0"></span>
+                <div>
+                  <h2 class="mb-0">Cotizador y solicitud directa a Fast Comex</h2>
+                  <p class="fc-quote-subtitle">Ingresa los datos de tu envío para conectar con nuestro equipo de operaciones.</p>
                 </div>
               </div>
+              <fieldset class="mt-4">
+                <legend class="fc-quote-label">Selecciona el servicio</legend>
+                <div aria-label="Tipo de servicio" class="fc-quote-services" role="group">
+                  <button aria-pressed="true" class="fc-quote-service" data-service="Marítimo (FCL/LCL)" type="button">
+                    <i class="fas fa-ship" aria-hidden="true"></i>
+                    <span><strong>Marítimo</strong><small>FCL / LCL</small></span>
+                  </button>
+                  <button aria-pressed="false" class="fc-quote-service" data-service="Aéreo Express" type="button">
+                    <i class="fas fa-plane" aria-hidden="true"></i>
+                    <span><strong>Aéreo</strong><small>Carga express</small></span>
+                  </button>
+                  <button aria-pressed="false" class="fc-quote-service" data-service="Terrestre / OTM" type="button">
+                    <i class="fas fa-truck" aria-hidden="true"></i>
+                    <span><strong>Terrestre</strong><small>Transporte / OTM</small></span>
+                  </button>
+                  <button aria-pressed="false" class="fc-quote-service" data-service="Aduanas" type="button">
+                    <i class="fas fa-file-invoice" aria-hidden="true"></i>
+                    <span><strong>Aduanas</strong><small>Gestión aduanera</small></span>
+                  </button>
+                </div>
+              </fieldset>
             </div>
-            <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <p class="text-xs text-slate-300 leading-relaxed">Tu solicitud se enviará directamente a nuestro equipo comercial por WhatsApp.</p>
-              <button class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm shadow-lg shadow-brand-red/30 transition-all inline-flex items-center justify-center gap-2 shrink-0" type="submit">
-                <span>Enviar solicitud</span>
-                <i class="fas fa-paper-plane" aria-hidden="true"></i>
-              </button>
-            </div>
-          </form>
+
+            <form id="quote-form">
+              <input id="quote-service-value" name="servicio" type="hidden" value="Marítimo (FCL/LCL)" />
+              <fieldset>
+                <legend class="fc-quote-label">Detalles del envío</legend>
+                <div class="row g-3">
+                  <div class="col-sm-6 col-lg-3">
+                    <label class="fc-quote-label" for="quote-origin">Origen</label>
+                    <select class="fc-input-dark" id="quote-origin" name="origen" required>
+                      <option value="">Selecciona origen</option>
+                      <option>Ningbo / Shanghai, China</option>
+                      <option>Miami, Estados Unidos</option>
+                      <option>Rotterdam / Hamburgo, Europa</option>
+                      <option>Ciudad de Panamá, Panamá</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <label class="fc-quote-label" for="quote-destination">Destino</label>
+                    <select class="fc-input-dark" id="quote-destination" name="destino" required>
+                      <option value="">Selecciona destino</option>
+                      <option>Bogotá D.C. (Aeropuerto / Zona Franca)</option>
+                      <option>Cartagena (SPRC / Contecar)</option>
+                      <option>Buenaventura (Aguadulce / SPRB)</option>
+                      <option>Medellín / Rionegro</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <label class="fc-quote-label" for="quote-cargo">Tipo de carga</label>
+                    <select class="fc-input-dark" id="quote-cargo" name="carga" required>
+                      <option value="">Selecciona tipo de carga</option>
+                      <option>Carga general (seca)</option>
+                      <option>Refrigerada / perecedera</option>
+                      <option>Peligrosa (IMO / químicos)</option>
+                      <option>Paquetería y muestras</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <label class="fc-quote-label" for="quote-volume">Modalidad / volumen</label>
+                    <input autocomplete="off" class="fc-input-dark" id="quote-volume" name="volumen" placeholder="Ej. 1 contenedor 40' HQ" required />
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="fc-quote-divider">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                  <span class="fc-quote-label mb-0">Datos de contacto para tu propuesta</span>
+                  <span class="text-secondary" style="font-size: 0.68rem;">Cotización personalizada</span>
+                </div>
+                <div class="row g-3">
+                  <div class="col-sm-4">
+                    <label class="fc-quote-label" for="quote-name">Nombre / empresa</label>
+                    <input autocomplete="name" class="fc-input-dark" id="quote-name" name="nombre" placeholder="Nombre o empresa" required />
+                  </div>
+                  <div class="col-sm-4">
+                    <label class="fc-quote-label" for="quote-email">Correo corporativo</label>
+                    <input autocomplete="email" class="fc-input-dark" id="quote-email" name="correo" placeholder="contacto@empresa.com" required type="email" />
+                  </div>
+                  <div class="col-sm-4">
+                    <label class="fc-quote-label" for="quote-phone">Teléfono / WhatsApp</label>
+                    <input autocomplete="tel" class="fc-input-dark" id="quote-phone" name="telefono" placeholder="+57 300 123 4567" required type="tel" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="fc-quote-divider d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+                <p class="text-secondary mb-0" style="font-size: 0.72rem; line-height: 1.6;">Tu solicitud se enviará directamente a nuestro equipo comercial por WhatsApp.</p>
+                <button class="fc-btn fc-btn-red flex-shrink-0" type="submit">
+                  <span>Enviar solicitud</span>
+                  <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+    <!-- HomeHeroSection End -->
 
-    <!-- About Section -->
-    <section class="py-24 bg-white" id="nosotros">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div class="lg:col-span-5 relative">
-            <div class="relative mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-              <img alt="Logística de comercio exterior" class="w-full h-[520px] object-cover object-center group-hover:scale-105 transition-all duration-700" src="img_02/---/about_00.jpg" />
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/15 backdrop-blur-xl border border-white/30 text-white">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-brand-red flex items-center justify-center font-bold text-white shadow-md">
+    <!-- AboutSection -->
+    <section class="fc-section bg-white" id="nosotros">
+      <div class="container fc-container-wide">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="fc-about-media">
+              <img alt="Logística de comercio exterior" src="img_02/---/about_00.jpg" />
+              <div class="fc-about-caption">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="fc-icon-box fc-icon-box-red flex-shrink-0">
                     <i class="fas fa-globe"></i>
                   </div>
                   <div>
-                    <h4 class="text-sm font-bold text-white">Hub Logístico Multimodal</h4>
-                    <p class="text-xs text-slate-200">Integración con puertos, aeropuertos y zonas francas</p>
+                    <h4 class="text-white fw-bold mb-1" style="font-size: 0.9rem;">Hub Logístico Multimodal</h4>
+                    <p class="text-white-50 mb-0" style="font-size: 0.72rem;">Integración con puertos, aeropuertos y zonas francas</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="lg:col-span-7">
-            <div class="inline-block text-xs font-bold text-brand-red uppercase tracking-wider mb-2">Sobre Nosotros</div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Creemos que la internacionalización no debería ser una barrera, sino una <span class="text-brand-red">oportunidad.</span>
+          <div class="col-lg-7">
+            <span class="fc-eyebrow mb-2">Sobre Nosotros</span>
+            <h2 class="fc-title fc-title-lg text-dark mb-3">
+              Creemos que la internacionalización no debería ser una barrera, sino una <span class="fc-red">oportunidad.</span>
             </h2>
-            <div class="mt-4 pl-4 border-l-4 border-brand-red">
-              <p class="text-slate-600 text-base leading-relaxed italic">
+            <div class="ps-3 border-start border-4 border-danger mb-4">
+              <p class="fc-text-slate fst-italic mb-0">
                 En Fast Comex, nos dedicamos a crear un ecosistema de internacionalización sin barreras.
               </p>
             </div>
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-red/30 transition">
-                <div class="flex items-center gap-2 mb-2 text-brand-red font-bold text-sm">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Nuestra Visión</span>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="fc-card p-4 h-100">
+                  <div class="d-flex align-items-center gap-2 fc-red fw-bold mb-2" style="font-size: 0.85rem;">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Nuestra Visión</span>
+                  </div>
+                  <h3 class="fw-bold text-dark mb-2" style="font-size: 0.9rem;">Un Ecosistema de Internacionalización Sin Barreras</h3>
+                  <p class="fc-text-slate mb-0" style="font-size: 0.8rem; line-height: 1.7;">
+                    Imaginamos un mundo donde todas las empresas, sin importar su tamaño, tengan acceso a servicios de comercio exterior de manera sencilla y confiable.
+                  </p>
                 </div>
-                <h3 class="font-bold text-slate-900 text-sm mb-1.5">Un Ecosistema de Internacionalización Sin Barreras</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                  Imaginamos un mundo donde todas las empresas, sin importar su tamaño, tengan acceso a servicios de comercio exterior de manera sencilla y confiable.
-                </p>
               </div>
-              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-red/30 transition">
-                <div class="flex items-center gap-2 mb-2 text-brand-red font-bold text-sm">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Nuestra Misión</span>
+              <div class="col-md-6">
+                <div class="fc-card p-4 h-100">
+                  <div class="d-flex align-items-center gap-2 fc-red fw-bold mb-2" style="font-size: 0.85rem;">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Nuestra Misión</span>
+                  </div>
+                  <h3 class="fw-bold text-dark mb-2" style="font-size: 0.9rem;">Facilitar la Internacionalización de PYMEs</h3>
+                  <p class="fc-text-slate mb-0" style="font-size: 0.8rem; line-height: 1.7;">
+                    Nos especializamos en ofrecer a las PYMEs un servicio personalizado y completo que cubre todos los aspectos de la exportación e importación.
+                  </p>
                 </div>
-                <h3 class="font-bold text-slate-900 text-sm mb-1.5">Facilitar la Internacionalización de PYMEs</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                  Nos especializamos en ofrecer a las PYMEs un servicio personalizado y completo que cubre todos los aspectos de la exportación e importación.
-                </p>
               </div>
             </div>
-            <div class="mt-8 grid grid-cols-3 gap-4">
-              <div class="bg-brand-dark text-white p-5 rounded-2xl text-center shadow-lg border border-slate-800 flex flex-col justify-center">
-                <span class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">32%</span>
-                <span class="text-[11px] sm:text-xs font-medium text-slate-300 mt-1 uppercase">Ecosistema Integral</span>
+            <div class="row g-3 mt-1">
+              <div class="col-4">
+                <div class="fc-stat fc-stat-dark">
+                  <strong>32%</strong>
+                  <span>Ecosistema Integral</span>
+                </div>
               </div>
-              <div class="bg-brand-red text-white p-5 rounded-2xl text-center shadow-lg shadow-brand-red/25 flex flex-col justify-center">
-                <span class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">21%</span>
-                <span class="text-[11px] sm:text-xs font-medium text-red-100 mt-1 uppercase">Velocidad y Precisión</span>
+              <div class="col-4">
+                <div class="fc-stat fc-stat-red">
+                  <strong>21%</strong>
+                  <span>Velocidad y Precisión</span>
+                </div>
               </div>
-              <div class="bg-brand-dark text-white p-5 rounded-2xl text-center shadow-lg border border-slate-800 flex flex-col justify-center">
-                <span class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">97%</span>
-                <span class="text-[11px] sm:text-xs font-medium text-slate-300 mt-1 uppercase">Conexión Global</span>
+              <div class="col-4">
+                <div class="fc-stat fc-stat-dark">
+                  <strong>97%</strong>
+                  <span>Conexión Global</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- AboutSection End -->
 
-    <!-- Services Section -->
-    <section class="py-24 bg-slate-50 border-t border-slate-200/70" id="servicios">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold text-brand-red uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Nuestros Servicios</span>
-          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Soluciones Completas en Comercio Exterior: <br class="hidden sm:inline"><span class="text-brand-red">De la A a la Z</span> para tu Internacionalización
+    <!-- ServicesSection -->
+    <section class="fc-section fc-soft-bg border-top border-secondary border-opacity-10" id="servicios">
+      <div class="container fc-container-wide">
+        <div class="text-center mx-auto mb-5" style="max-width: 780px;">
+          <span class="fc-badge-red mb-3">Nuestros Servicios</span>
+          <h2 class="fc-title fc-title-lg text-dark mb-3">
+            Soluciones Completas en Comercio Exterior: <br class="d-none d-sm-block" /><span class="fc-red">De la A a la Z</span> para tu Internacionalización
           </h2>
-          <p class="mt-3 text-slate-600 text-sm sm:text-base">Acompañamiento especializado en cada eslabón de la cadena logística.</p>
+          <p class="fc-text-slate mb-0">Acompañamiento especializado en cada eslabón de la cadena logística.</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-md card-hover-border flex flex-col">
-            <div class="h-44 overflow-hidden relative">
-              <img alt="Asesoría Internacional" class="w-full h-full object-cover" src="img_02/---/asesoria_internacional_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-brand-red text-white p-2 rounded-lg shadow-md">
-                <i class="fas fa-compass"></i>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column">
+              <div class="fc-service-media" style="height: 11rem;">
+                <img alt="Asesoría Internacional" src="img_02/---/asesoria_internacional_00.png" />
+                <span class="fc-service-tag">Estrategia Global</span>
               </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between text-center">
-              <div>
-                <h3 class="font-bold text-slate-900 text-lg leading-snug">Asesoría Internacional</h3>
-                <p class="mt-2 text-xs text-slate-500 font-medium">Tu Puente hacia Nuevas Oportunidades Globales</p>
+              <div class="fc-service-body flex-grow-1 d-flex flex-column text-center">
+                <div class="fc-service-icon mx-auto"><i class="fas fa-compass"></i></div>
+                <h3 style="font-size: 1.05rem;">Asesoría Internacional</h3>
+                <p style="font-size: 0.8rem;">Tu Puente hacia Nuevas Oportunidades Globales</p>
+                <div class="mt-auto pt-3 border-top">
+                  <a class="fc-btn fc-btn-sm" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
+                </div>
               </div>
-              <div class="mt-6 pt-4 border-t border-slate-100">
-                <a class="text-xs font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
+            </article>
           </div>
-          <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-md card-hover-border flex flex-col">
-            <div class="h-44 overflow-hidden relative">
-              <img alt="Análisis y Asesoría Logística" class="w-full h-full object-cover" src="img_02/---/asesoria_logistica_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-brand-red text-white p-2 rounded-lg shadow-md">
-                <i class="fas fa-chart-line"></i>
+
+          <div class="col-sm-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column">
+              <div class="fc-service-media" style="height: 11rem;">
+                <img alt="Análisis y Asesoría Logística" src="img_02/---/asesoria_logistica_00.png" />
+                <span class="fc-service-tag">Optimización</span>
               </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between text-center">
-              <div>
-                <h3 class="font-bold text-slate-900 text-lg leading-snug">Análisis y Asesoría Logística</h3>
-                <p class="mt-2 text-xs text-slate-500 font-medium">Optimiza tu Cadena de Suministro Global</p>
+              <div class="fc-service-body flex-grow-1 d-flex flex-column text-center">
+                <div class="fc-service-icon mx-auto"><i class="fas fa-chart-line"></i></div>
+                <h3 style="font-size: 1.05rem;">Análisis y Asesoría Logística</h3>
+                <p style="font-size: 0.8rem;">Optimiza tu Cadena de Suministro Global</p>
+                <div class="mt-auto pt-3 border-top">
+                  <a class="fc-btn fc-btn-sm" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
+                </div>
               </div>
-              <div class="mt-6 pt-4 border-t border-slate-100">
-                <a class="text-xs font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
+            </article>
           </div>
-          <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-md card-hover-border flex flex-col">
-            <div class="h-44 overflow-hidden relative">
-              <img alt="Transporte Internacional" class="w-full h-full object-cover" src="img_02/---/transporte_internacional_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-brand-red text-white p-2 rounded-lg shadow-md">
-                <i class="fas fa-ship"></i>
+
+          <div class="col-sm-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column">
+              <div class="fc-service-media" style="height: 11rem;">
+                <img alt="Transporte Internacional" src="img_02/---/transporte_internacional_00.png" />
+                <span class="fc-service-tag">Multimodal</span>
               </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between text-center">
-              <div>
-                <h3 class="font-bold text-slate-900 text-lg leading-snug">Transporte Internacional</h3>
-                <p class="mt-2 text-xs text-slate-500 font-medium">Conectando Tu Negocio con el Mundo</p>
+              <div class="fc-service-body flex-grow-1 d-flex flex-column text-center">
+                <div class="fc-service-icon mx-auto"><i class="fas fa-ship"></i></div>
+                <h3 style="font-size: 1.05rem;">Transporte Internacional</h3>
+                <p style="font-size: 0.8rem;">Conectando Tu Negocio con el Mundo</p>
+                <div class="mt-auto pt-3 border-top">
+                  <a class="fc-btn fc-btn-sm" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
+                </div>
               </div>
-              <div class="mt-6 pt-4 border-t border-slate-100">
-                <a class="text-xs font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
+            </article>
           </div>
-          <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-md card-hover-border flex flex-col">
-            <div class="h-44 overflow-hidden relative">
-              <img alt="Transporte Nacional Urbano" class="w-full h-full object-cover" src="img_02/---/transporte_nacional_00.png" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-brand-red text-white p-2 rounded-lg shadow-md">
-                <i class="fas fa-truck"></i>
+
+          <div class="col-sm-6 col-lg-3">
+            <article class="fc-card fc-card-hover fc-service-card h-100 d-flex flex-column">
+              <div class="fc-service-media" style="height: 11rem;">
+                <img alt="Transporte Nacional Urbano" src="img_02/---/transporte_nacional_00.png" />
+                <span class="fc-service-tag">Última Milla</span>
               </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between text-center">
-              <div>
-                <h3 class="font-bold text-slate-900 text-lg leading-snug">Transporte Nacional Urbano</h3>
-                <p class="mt-2 text-xs text-slate-500 font-medium">Eficiencia Local, Alcance Global</p>
+              <div class="fc-service-body flex-grow-1 d-flex flex-column text-center">
+                <div class="fc-service-icon mx-auto"><i class="fas fa-truck"></i></div>
+                <h3 style="font-size: 1.05rem;">Transporte Nacional Urbano</h3>
+                <p style="font-size: 0.8rem;">Eficiencia Local, Alcance Global</p>
+                <div class="mt-auto pt-3 border-top">
+                  <a class="fc-btn fc-btn-sm" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
+                </div>
               </div>
-              <div class="mt-6 pt-4 border-t border-slate-100">
-                <a class="text-xs font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1" href="service.html">Conocer más <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
-        <div class="mt-12 text-center">
-          <a class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-slate-950 hover:bg-brand-red text-white text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-brand-red/30 transition-all duration-300" href="service.html">Más Servicios</a>
+
+        <div class="text-center mt-5">
+          <a class="fc-btn fc-btn-dark" href="service.html">Más Servicios</a>
         </div>
       </div>
     </section>
+    <!-- ServicesSection End -->
 
-    <!-- Footer -->
-    <footer class="bg-brand-dark text-slate-300 pt-16 pb-12 border-t border-slate-800" id="contacto">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80">
-          <div class="lg:col-span-4 space-y-4">
-            <div class="flex items-center gap-3">
-              <img class="h-10" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex" />
-            </div>
-            <h5 class="text-sm font-bold text-white uppercase tracking-wider">Información</h5>
-            <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+    <!-- CorporateFooter -->
+    <footer class="fc-footer" id="contacto" data-purpose="corporate-footer">
+      <div class="container fc-container-wide">
+        <div class="row g-4 pb-5 border-bottom border-secondary border-opacity-10">
+          <div class="col-md-6 col-lg-4">
+            <img class="mb-3" style="height: 2.5rem;" src="img_02/---/logo_fast_svg.svg" alt="Fast Comex" />
+            <h5 class="fc-title text-white mb-2" style="font-size: 1rem;">Información</h5>
+            <p class="fc-text-muted mb-0" style="font-size: 0.8rem; line-height: 1.7; max-width: 340px;">
               Nuestro objetivo es transformar la incertidumbre en confianza, ofreciendo un entorno en el que cada paso en el camino internacional está respaldado por una red de apoyo sólida.
             </p>
           </div>
-          <div class="lg:col-span-3 space-y-3">
-            <h5 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Explorar</h5>
-            <ul class="space-y-2.5 text-xs text-slate-400">
-              <li><a class="hover:text-white transition flex items-center gap-2" href="index.html"><i class="fas fa-chevron-right text-brand-red"></i> Inicio</a></li>
-              <li><a class="hover:text-white transition flex items-center gap-2" href="about.html"><i class="fas fa-chevron-right text-brand-red"></i> Nosotros</a></li>
-              <li><a class="hover:text-white transition flex items-center gap-2" href="service.html"><i class="fas fa-chevron-right text-brand-red"></i> Servicios</a></li>
-              <li><a class="hover:text-white transition flex items-center gap-2" href="contact.html"><i class="fas fa-chevron-right text-brand-red"></i> Contacto</a></li>
+
+          <div class="col-md-6 col-lg-3">
+            <h5>Explorar</h5>
+            <ul class="fc-footer-list">
+              <li><a href="index.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Inicio</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Nosotros</a></li>
+              <li><a href="service.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Servicios</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right fc-red" style="font-size: 0.65rem;"></i> Contacto</a></li>
             </ul>
           </div>
-          <div class="lg:col-span-5 space-y-3.5">
-            <h5 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Información de contacto</h5>
-            <div class="space-y-2.5 text-xs text-slate-300">
-              <div class="flex items-start gap-2.5">
-                <i class="fas fa-map-marker-alt text-brand-red mt-0.5"></i>
-                <span><strong>Oficina Principal:</strong> Calle 83 #21-15, Bogotá D.C.</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <i class="fas fa-building text-brand-red mt-0.5"></i>
-                <span><strong>Oficina Zona Franca:</strong> Fontibón, Bogotá</span>
-              </div>
-              <div class="flex items-start gap-2.5">
-                <i class="fas fa-globe text-brand-red mt-0.5"></i>
-                <span><strong>Oficina China:</strong> Shenzhen / Ningbo</span>
-              </div>
-              <div class="flex items-center gap-2.5">
-                <i class="fas fa-envelope text-brand-red"></i>
-                <a class="hover:text-white transition" href="mailto:contacto@fast-comex.com">contacto@fast-comex.com</a>
-              </div>
-              <div class="flex items-center gap-2.5">
-                <i class="fas fa-phone text-brand-red"></i>
-                <a class="hover:text-white transition" href="tel:+6015343050">+(601) 534 3050</a>
-              </div>
-            </div>
-            <div class="pt-3 flex items-center gap-3">
-              <a aria-label="Facebook" class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-brand-redDark transition shadow-md" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank">
-                <i class="fab fa-facebook-f"></i>
+
+          <div class="col-md-6 col-lg-5">
+            <h5>Información de contacto</h5>
+            <ul class="fc-footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong class="text-white">Oficina Principal:</strong> Calle 83 a #21-15, Bogotá D.C.</span>
+              </li>
+              <li>
+                <i class="fas fa-building"></i>
+                <span><strong class="text-white">Oficina Zona Franca:</strong> Fontibón, Bogotá</span>
+              </li>
+              <li>
+                <i class="fas fa-globe"></i>
+                <span><strong class="text-white">Oficina China:</strong> Shenzhen / Ningbo</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:contacto@fast-comex.com">contacto@fast-comex.com</a>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+6015343050">+(601) 534 3050</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-2 mt-3">
+              <a aria-label="Facebook" class="fc-social" href="https://www.facebook.com/profile.php?id=61568081906891" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a aria-label="Twitter" class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-brand-redDark transition shadow-md" href="#">
-                <i class="fab fa-twitter"></i>
+              <a aria-label="Twitter" class="fc-social" href="#">
+                <i class="fa-brands fa-x-twitter"></i>
               </a>
-              <a aria-label="Instagram" class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-brand-redDark transition shadow-md" href="#">
-                <i class="fab fa-instagram"></i>
+              <a aria-label="Instagram" class="fc-social" href="#">
+                <i class="fa-brands fa-instagram"></i>
               </a>
-              <a aria-label="LinkedIn" class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-brand-redDark transition shadow-md" href="#">
-                <i class="fab fa-linkedin-in"></i>
+              <a aria-label="LinkedIn" class="fc-social" href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
           </div>
         </div>
-        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <div class="flex items-center gap-1.5">
-            <i class="far fa-copyright text-brand-red"></i>
-            <span><span class="text-brand-red font-semibold">fast-comex.com</span>, Todos los derechos reservados.</span>
-          </div>
-          <a aria-label="Volver arriba" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 text-white flex items-center justify-center hover:bg-brand-red hover:border-brand-red transition shadow-md" href="#">
+
+        <div class="fc-footer-bottom d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+          <p class="mb-0 d-flex align-items-center gap-2">
+            <i class="far fa-copyright fc-red"></i>
+            <span><span class="fc-red fw-semibold">fast-comex.com</span>, Todos los derechos reservados.</span>
+          </p>
+          <a aria-label="Volver arriba" class="fc-back-top position-static" href="#" style="width: auto; height: auto; border: 0; background: transparent; box-shadow: none; padding: 0;">
+            <span class="me-1">Volver arriba</span>
             <i class="fas fa-arrow-up"></i>
           </a>
         </div>
       </div>
     </footer>
+    <!-- CorporateFooter End -->
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -539,33 +512,28 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Contact Form Javascript -->
-    <script src="mailer/validation.form.js"></script>
-    <script src="mailer/contact.form.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const serviceInput = document.getElementById("quote-service-value");
-        const serviceButtons = document.querySelectorAll(".quote-service");
-        const quoteForm = document.getElementById("quote-form");
+        var serviceInput = document.getElementById("quote-service-value");
+        var serviceButtons = document.querySelectorAll(".fc-quote-service");
+        var quoteForm = document.getElementById("quote-form");
 
         serviceButtons.forEach(function (button) {
           button.addEventListener("click", function () {
             serviceInput.value = button.dataset.service;
             serviceButtons.forEach(function (serviceButton) {
-              const isSelected = serviceButton === button;
-              serviceButton.setAttribute("aria-pressed", String(isSelected));
+              serviceButton.setAttribute("aria-pressed", String(serviceButton === button));
             });
           });
         });
 
         quoteForm.addEventListener("submit", function (event) {
           event.preventDefault();
-          const formData = new FormData(quoteForm);
-          const message = [
+          var formData = new FormData(quoteForm);
+          var message = [
             "Hola, quiero solicitar una cotización a Fast Comex.",
             "Servicio: " + formData.get("servicio"),
             "Origen: " + formData.get("origen"),
@@ -579,12 +547,14 @@
 
           window.open("https://wa.me/573017265662?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
         });
-      });
 
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        if (window.lucide) { window.lucide.createIcons(); }
+        var backTop = document.querySelector(".fc-back-top");
+        if (backTop) {
+          backTop.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
       });
     </script>
   </body>
