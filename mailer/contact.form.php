@@ -1,16 +1,20 @@
 <?php
 
 // Mailer form data
-$name = $_POST['name'];
-$email = $_POST['email'];
-$mobile = $_POST['mobile'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+$name = isset($_POST['name']) ? $_POST['name'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$mobile = isset($_POST['mobile']) ? $_POST['mobile'] : '';
+$subject = isset($_POST['subject']) ? $_POST['subject'] : '';
+$message = isset($_POST['message']) ? $_POST['message'] : '';
+$company = isset($_POST['company']) ? $_POST['company'] : '';
+$origin = isset($_POST['origin']) ? $_POST['origin'] : '';
 
 // HTML email body
 $htmlBody = "<p>Name: $name</p>";
 $htmlBody .= "<p>Email: $email</p>";
 ($mobile !== "noMobile") ? $htmlBody .= "<p>Mobile: $mobile</p>" : "";
+($company !== "") ? $htmlBody .= "<p>Company: $company</p>" : "";
+($origin !== "") ? $htmlBody .= "<p>Origin / Destination: $origin</p>" : "";
 $htmlBody .= "<p>Subject: $subject</p>";
 $htmlBody .= "<p>Message: $message</p>";
 
@@ -18,6 +22,8 @@ $htmlBody .= "<p>Message: $message</p>";
 $plainTextBody = "Name: $name\n";
 $plainTextBody .= "Email: $email\n";
 ($mobile !== "noMobile") ? $plainTextBody .= "Mobile: $mobile\n" : "";
+($company !== "") ? $plainTextBody .= "Company: $company\n" : "";
+($origin !== "") ? $plainTextBody .= "Origin / Destination: $origin\n" : "";
 $plainTextBody .= "Subject: $subject\n";
 $plainTextBody .= $message;
 

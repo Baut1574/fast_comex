@@ -6,16 +6,22 @@
         submitError: function ($form, event, errors) {},
         submitSuccess: function ($form, event) {
             event.preventDefault();
-            
+
             var name = $("input#name").val();
             var email = $("input#email").val();
-            var subject = $("input#subject").val();
+            var subject = $("#subject").val();
             var message = $("textarea#message").val();
             var mobile = ($("input#mobile").length) ? $("input#mobile").val() : "noMobile";
+            var company = ($("#company").length) ? $("#company").val() : "";
+            var origin = ($("#origin-dest").length) ? $("#origin-dest").val() : "";
 
-            $("#sendMessageButton").prop("disabled", true);
-            $("#sendMessageButton span").text("Sending...");
-            $("#sendMessageButton div").removeClass("d-none");
+            var $button = $("#sendMessageButton");
+            var $buttonText = $button.find("span");
+            var $buttonIcon = $button.find("i, svg");
+
+            $button.prop("disabled", true).addClass("opacity-70 cursor-not-allowed");
+            $buttonText.text("Enviando...");
+            $buttonIcon.addClass("animate-pulse");
 
             $.ajax({
                 url: "mailer/contact.form.php",
@@ -25,41 +31,57 @@
                     email: email,
                     mobile: mobile,
                     subject: subject,
-                    message: message
+                    message: message,
+                    company: company,
+                    origin: origin
                 },
                 dataType: "json",
                 cache: false,
                 success: function (response) {
-                    if (response.status === 'success') {
-                        $('#alertMessage').html("<div class='alert alert-success alert-dismissible'>");
-                        $('#alertMessage > .alert-success').html("<button type='button' class='btn-close' data-bs-dismiss='alert' aria-hidden='true'>").append("</button>");
-                        $('#alertMessage > .alert-success').append("<strong>" + response.message + "</strong>");
-                        $('#alertMessage > .alert-success').append('</div>');
+                    var isSuccess = response.status === "success";
+                    var alertStyles = isSuccess
+                        ? "border-emerald-200 bg-emerald-50 text-emerald-800"
+                        : "border-red-200 bg-red-50 text-red-800";
+                    var alertIcon = isSuccess ? "check-circle-2" : "alert-circle";
+
+                    $('#alertMessage').html(
+                        '<div class="mb-6 flex items-start gap-3 rounded-xl border p-4 text-sm ' + alertStyles + '">' +
+                            '<i data-lucide="' + alertIcon + '" class="w-5 h-5 shrink-0"></i>' +
+                            '<strong class="font-semibold">' + response.message + "</strong>" +
+                        "</div>"
+                    );
+
+                    if (window.lucide) {
+                        window.lucide.createIcons();
+                    }
+
+                    if (isSuccess) {
                         $('#contactForm').trigger("reset");
-                    } else {
-                        $('#alertMessage').html("<div class='alert alert-danger alert-dismissible'>");
-                        $('#alertMessage > .alert-danger').html("<button type='button' class='btn-close' data-bs-dismiss='alert' aria-hidden='true'>").append("</button>");
-                        $('#alertMessage > .alert-danger').append("<strong>" + response.message + "</strong>");
-                        $('#alertMessage > .alert-danger').append('</div>');
                     }
                 },
-                error: function(xhr, textStatus, errorThrown) {
-                    $('#alertMessage').html("<div class='alert alert-danger alert-dismissible'>");
-                    $('#alertMessage > .alert-danger').html("<button type='button' class='btn-close' data-bs-dismiss='alert' aria-hidden='true'>").append("</button>");
-                    $('#alertMessage > .alert-danger').append("<strong>Ajax Error: " + errorThrown + "</strong>");
-                    $('#alertMessage > .alert-danger').append('</div>');
+                error: function (xhr, textStatus, errorThrown) {
+                    $('#alertMessage').html(
+                        '<div class="mb-6 flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">' +
+                            '<i data-lucide="alert-circle" class="w-5 h-5 shrink-0"></i>' +
+                            '<strong class="font-semibold">No se pudo enviar el mensaje. Por favor intenta nuevamente.</strong>' +
+                        "</div>"
+                    );
+
+                    if (window.lucide) {
+                        window.lucide.createIcons();
+                    }
                 },
                 complete: function () {
-                    $("#sendMessageButton").prop("disabled", false);
-                    $("#sendMessageButton span").text("Send Message");
-                    $("#sendMessageButton div").addClass("d-none");
+                    $button.prop("disabled", false).removeClass("opacity-70 cursor-not-allowed");
+                    $buttonText.text("Enviar Mensaje a Fast Comex");
+                    $buttonIcon.removeClass("animate-pulse");
                 }
             });
         },
     });
 
-    $('#name, #email, #subject, #message').focus(function () {
+    $('#name, #email, #mobile, #subject, #message').focus(function () {
         $('#alertMessage').html('');
     });
-    
+
 })(jQuery);
